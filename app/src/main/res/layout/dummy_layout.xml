@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Tanggal"
+            android:padding="10dp"
+            android:id="@+id/idkolom1"
+            android:textAlignment="center"
+            android:background="@color/colorBlue"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Umur"
+            android:id="@+id/idkolom2"
+            android:textAlignment="center"
+            android:background="@color/colorBlue"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="BB"
+            android:textAlignment="center"
+            android:id="@+id/idkolom3"
+            android:background="@color/colorBlue"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="PB"
+            android:id="@+id/idkolom4"
+            android:textAlignment="center"
+            android:background="@color/colorBlue"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="LK"
+            android:id="@+id/idkolom5"
+            android:textAlignment="center"
+            android:background="@color/colorBlue"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/idkolom6"
+            android:padding="10dp"
+            android:text="Pemeriksaan"
+            android:textAlignment="center"
+            android:background="@color/colorBlue"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:layout_width="120dp"
+            android:id="@+id/idkolom7"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Pengobatan"
+            android:textAlignment="center"
+            android:background="@color/colorBlue"
+            android:textColor="@color/colorWhite"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

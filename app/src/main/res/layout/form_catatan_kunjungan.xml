@@ -1,0 +1,209 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <!-- Baris 1 Kolom 1 -->
+
+    <TableRow
+        android:id="@+id/tableRowLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/bayi"
+            android:layout_centerHorizontal="true"
+            />
+    </TableRow>
+
+    <TextView
+        android:id="@+id/txtlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Catatan Kunjungan"
+        android:gravity="center"
+        />
+
+    <!--Baris 2 Kolom 2 -->
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tgl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal : "
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/editTextTanggal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" >
+        </EditText>
+    </TableRow>
+
+    <!-- Baris 3 Kolom 3 -->
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/Umur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Umur : "
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/editTextUmur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+
+    <!-- Baris 4 Kolom 4 -->
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/beratBadan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Berat Badan : "
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/editTextberatBadan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberSigned" >
+        </EditText>
+    </TableRow>
+
+    <!-- Baris 5 Kolom 5 -->
+
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/panjangBadan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Panjang Badan : "
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/editTextpanjangBadan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+
+    <!-- Baris 6 Kolom 6 -->
+
+    <TableRow
+        android:id="@+id/tableRow6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/LK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lingkar Kepala : "
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/editTextLK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    <!-- Baris 7 Kolom 7 -->
+
+    <TableRow
+        android:id="@+id/tableRow7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/Pemeriksaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pemeriksaan : "
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/editTextPemeriksaan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+
+    <!-- Baris 8 Kolom 8 -->
+
+    <TableRow
+        android:id="@+id/tableRow8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/pengobatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pengobatan : "
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/editTextPengobatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+
+    <!-- Baris 8 Kolom 1 -->
+
+    <TableRow
+        android:id="@+id/tableRowTabel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/buttonTabelCatK"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Tabel Catatan Kunjungan" />
+    </TableRow>
+
+</TableLayout>

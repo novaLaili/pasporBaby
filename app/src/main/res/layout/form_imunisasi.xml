@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.laili.pasporbayi.TKBActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Imunisasi"
+                        android:padding="10dp"
+                        android:textAlignment="center"
+                        android:background="@color/colorBlue"
+                        android:textColor="@color/colorWhite"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Umur yang dianjurkan"
+                        android:textAlignment="center"
+                        android:background="@color/colorBlue"
+                        android:textColor="@color/colorWhite"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Tanggal Imunisasi"
+                        android:textAlignment="center"
+                        android:background="@color/colorBlue"
+                        android:textColor="@color/colorWhite"/>
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Hepatitis B"
+                    android:textAlignment="center"/>
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="0 bulan"
+                    android:textAlignment="center"/>
+                <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/HB_0bulan"
+                    android:hint="tanggal"
+                    android:textAlignment="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Hepatitis B"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="1 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/HB_1bulan"
+                        android:hint="tanggal"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Hepatitis B"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="6 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/HB_6bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Polio"
+                        android:textAlignment="center"/>
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="0 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/P_0bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Polio"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="2 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/P_2bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Polio"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="4 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/P_4bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Polio"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="6 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/P_6bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Polio"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="18-24 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/P_8_12bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Polio"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="5 tahun"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/P_5tahun"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="BCG"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="2-3 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/BCG"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="DIP"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="2 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/DIP_2bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="DIP"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="4 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/DIP_4bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="DIP"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="18-24 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/DIP_18_24bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="DIP"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="5 tahun"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/DIP_5tahun"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="DIP"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="10-12 tahun"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/DIP_10_24tahun"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="DIP"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="18 tahun"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/DIP_18tahun"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Hib"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="2 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Hib_2bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Hib"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="4 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:id="@+id/Hib_4bulan"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Hib"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="6 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Hib_6bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Hib"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="15-18 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Hib_15_18bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Pneumokokus (PCV)"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="2 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/PCV_2bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Pneumokokus (PCV)"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="4 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/PCV_4bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Pneumokokus (PCV)"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="6 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/PCV_6bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Pneumokokus (PCV)"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="12-15 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/PCV_12_15bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Rotavirus"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="2 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/R_2bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Rotavirus"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="4 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:id="@+id/R_4bulan"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Rotavirus"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="6 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/R_6bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Influenza"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="6 bulan - 18 tahun (setahun sekali)"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/R_6_18bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Campak"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="9 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/C_9bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Campak"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="6 tahun"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="145dp"
+                        android:id="@+id/C_6tahun"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="MMR"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="15 bulan"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/M_15bulan"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="MMR"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="6 tahun"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/M_6tahun"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Tifoid"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="2-18 tahun (ulangan tiap 3 tahun)"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/T_2_18tahun"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Hepatitis A"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="2-18 tahun (2x interval 6-12 bulan)"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/HA_2_18tahun"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Varisela"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="1-18 tahun"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/V_1_18tahun"
+                        android:hint="tanggal"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="HPV"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="10-18 tahun (3 kali)"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/HPV_10_18thn"
+                        android:textAlignment="center"
+                        android:hint="tanggal"/>
+                </LinearLayout>
+
+
+                <!--<android.support.v7.widget.RecyclerView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/iDdummy">-->
+
+                <!--</android.support.v7.widget.RecyclerView>-->
+            </LinearLayout>
+        </HorizontalScrollView>
+    </android.support.v4.widget.NestedScrollView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/buttonHasil"
+                android:layout_marginTop="1000dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hasil Imunisasi"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+

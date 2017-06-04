@@ -1,0 +1,647 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RiwayatKelahiranActivity"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:shrinkColumns="*"
+        android:stretchColumns="*" >
+
+        <!-- Baris 1 Kolom 1 -->
+
+        <TableRow
+            android:id="@+id/tableRowLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/bayi"
+                android:layout_centerHorizontal="true"
+                />
+        </TableRow>
+
+        <TextView
+            android:id="@+id/txtlogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Riwayat Kelahiran"
+            android:gravity="center"
+            />
+
+        <!--Baris 2 Kolom 2 -->
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tglLahir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tgl Lahir : "
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/editTextTglLahir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" >
+            </EditText>
+        </TableRow>
+
+        <!-- Baris 3 Kolom 3 -->
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/namaRS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama RS : "
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/editTextNamaRS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" >
+            </EditText>
+        </TableRow>
+
+        <!-- Baris 4 Kolom 4 -->
+        <TextView
+            android:id="@+id/penolong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Penolong Persalinan :"
+            android:textSize="14dp" />
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:id="@+id/dokterObs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Dokter Obs-Gyn :"
+                android:textSize="12dp" />
+            <EditText
+                android:id="@+id/editTextDokterObs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" >
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/dokterAnak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Dokter Anak : "
+                android:textSize="12dp" />
+
+            <EditText
+                android:id="@+id/editTextDokterAnak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" >
+            </EditText>
+        </TableRow>
+
+        <!-- Baris 7 Kolom 7 -->
+
+        <TableRow
+            android:id="@+id/tableRow7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/umurKelahiran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Umur Kelahiran :"
+                android:textSize="12dp" />
+
+            <EditText
+                android:id="@+id/editTextumurKelahiran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="minggu"
+                android:inputType="textPersonName" >
+            </EditText>
+        </TableRow>
+
+        <RadioGroup
+            android:id="@+id/group1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:text="Aterm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/RbAterm" />
+            <RadioButton
+                android:text="Premature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/RbPremature" />
+            <RadioButton
+                android:text="Dystmature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:id="@+id/RbDystmature" />
+            <RadioButton
+                android:text="PostMature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/RbPostMature" />
+        </RadioGroup>
+
+        <!--Baris 10 Kolom 10 -->
+        <TableRow>
+        <TextView
+            android:id="@+id/letakJanin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Letak Janin :"
+            android:textSize="14dp" />
+        <RadioGroup
+            android:id="@+id/group2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:text="Kepala"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/RadioButtonKepala" />
+            <RadioButton
+                android:text="Bokong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/RadioButtonBokong" />
+
+            <RadioButton
+                android:text="Lintang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/RadioButtonLintang" />
+
+            <RadioButton
+                android:text="Lain-lain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/RadioButtonLain2" />
+        </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow13ab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14dp" />
+            <EditText
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextLain2" />
+        </TableRow>
+
+        <!-- Baris 14 Kolom 14 -->
+        <TableRow
+            android:id="@+id/tableRow14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/caraLahir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cara Lahir :"
+                android:textSize="14dp" />
+            <RadioGroup
+                android:id="@+id/group3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:text="Partus Spontan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RadioButtonPartusSpontan" />
+                <RadioButton
+                    android:text="Spontan Sungsang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RadioButtonSpontanSungsang" />
+                <RadioButton
+                    android:text="Vacuum Extraksi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RadioButtonVacuum" />
+                <RadioButton
+                    android:text="Forcep Extraksi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RadioButtonForcep" />
+                <RadioButton
+                    android:text="Versi Ekstraksi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RadioButtonVersi" />
+                <RadioButton
+                    android:text="Sectio Caesaria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RadioButtonSectio" />
+            </RadioGroup>
+        </TableRow>
+        <!-- Baris 20 Kolom 20-->
+        <TableRow
+            android:id="@+id/tableRow20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apgar Scope :"
+                android:textSize="14dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextApgarScope" />
+        </TableRow>
+        <!-- Baris 21 Kolom 21-->
+        <TableRow
+            android:id="@+id/tableRow21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Berat Badan Lahir :"
+                android:textSize="14dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="gram"
+                android:id="@+id/editTextBBLahir" />
+        </TableRow>
+        <!-- Baris 22 Kolom 22-->
+        <TableRow
+            android:id="@+id/tableRow22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Panjang Badan Lahir :"
+                android:textSize="14dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextPBLahir" />
+        </TableRow>
+        <!-- Baris 23 Kolom 23-->
+        <TableRow
+            android:id="@+id/tableRow23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lingkar Kepala :"
+                android:textSize="12dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextLKepala" />
+        </TableRow>
+        <!-- Baris 24 Kolom 24-->
+        <TableRow
+            android:id="@+id/tableRow24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lingkar Dada :"
+                android:textSize="14dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextLingkarDada" />
+        </TableRow>
+        <!-- Baris 25 Kolom 25-->
+        <TextView
+            android:id="@+id/taliPusat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tali Pusat :"
+            android:textSize="14dp" />
+        <TableRow
+            android:id="@+id/tableRow25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:id="@+id/panjangTali"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Panjang :"
+                android:textSize="14dp" />
+            <EditText
+                android:id="@+id/editTextpanjang"
+                android:layout_width="match_parent"
+                android:hint="cm"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" >
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow26"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/lilitan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Lilitan : "
+                android:textSize="14dp" />
+
+            <RadioGroup
+                android:id="@+id/group4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:text="Ada /"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RadioButtonAdalilitan" />
+                <RadioButton
+                    android:text="Tidak Ada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RadioButtonTidaklilitan" />
+            </RadioGroup>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow28"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:id="@+id/prolaps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Prolaps : "
+                android:textSize="14dp" />
+            <RadioGroup
+                android:id="@+id/group5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:text="Ada /"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RadioButtonAdaprolaps" />
+                <RadioButton
+                    android:text="Tidak Ada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RadioButtonTidakprolaps" />
+
+            </RadioGroup>
+        </TableRow>
+        <!-- Baris 30 -->
+        <TableRow
+            android:id="@+id/tableRow30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/insersi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Insersi : "
+                android:textSize="14dp" />
+            <RadioGroup
+                android:id="@+id/groupInsersi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:text="Sentral /"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RadioButtonsentral" />
+                <RadioButton
+                    android:text="Leteral /"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RadioButtonLeteral" />
+            </RadioGroup>
+        </TableRow>
+        <!-- Baris 32 Kolom 32-->
+        <TextView
+            android:id="@+id/airKetuban"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Air Ketuban :"
+            android:textSize="14dp" />
+        <TableRow
+            android:id="@+id/tableRow32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:id="@+id/warna"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Warna :"
+                android:textSize="14dp" />
+            <EditText
+                android:id="@+id/editTextwarnaKetuban"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" >
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow33"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/bau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Bau : "
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/editTextbauKetuban"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" >
+            </EditText>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow34"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Jumlah : "
+                android:textSize="14dp" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/group6">
+                <RadioButton
+                    android:text="Normal /"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RadioButtonjumlahNormal" />
+                <RadioButton
+                    android:text="Hydramnion /"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RadioButtonjumlahHydram" />
+                <RadioButton
+                    android:text="Oligamnion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RadioButtonjumlahOligam" />
+            </RadioGroup>
+        </TableRow>
+
+        <!-- Baris 37 Kolom 37-->
+        <TextView
+            android:id="@+id/placenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Placenta :"
+            android:textSize="14dp" />
+        <TableRow
+            android:id="@+id/tableRow37"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:id="@+id/beratPlacenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Berat :"
+                android:textSize="14dp" />
+            <EditText
+                android:id="@+id/editTextberatPlacenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="gram"
+                android:inputType="textPersonName" >
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow38"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/kelahiranPlacenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Kelahiran : "
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/editTextklhrnPlacenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" >
+            </EditText>
+        </TableRow>
+
+        <!-- Baris 39 Kolom 39-->
+        <TableRow
+            android:id="@+id/tableRow39"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/goldar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Golongan Darah : "
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/editTextgoldar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" >
+            </EditText>
+        </TableRow>
+        <!-- Baris 25 Kolom 1 -->
+        <TableRow
+            android:id="@+id/tableRowHasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/buttonHome"
+                android:src="@drawable/construction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"/>
+
+            <ImageButton
+                android:id="@+id/buttonNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/nextpage"
+                />
+        </TableRow>
+
+
+    </TableLayout>
+</ScrollView>

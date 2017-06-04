@@ -1,0 +1,91 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:shrinkColumns="*"
+    android:stretchColumns="*" >
+
+    <!-- Baris 1 Kolom 1 -->
+
+    <TableRow
+        android:id="@+id/tableRowLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/bayi"
+            android:layout_centerHorizontal="true"
+            />
+    </TableRow>
+    <TextView
+        android:id="@+id/txtlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasil Tumbuh Kembang Balita"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/hasil"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Di usianya yang menginjak 1 bulan seharusnya balita bunda sudah bisa :"
+        android:textSize="16dp"/>
+
+    <CheckedTextView
+        android:text="tangan dan kaki bergerak aktif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/check1" />
+
+    <CheckedTextView
+        android:text="kepala menoleh kesamping kanan-kiri "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/check2" />
+
+    <CheckedTextView
+        android:text="bereaksi pada bunyi lonceng "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/check3" />
+
+    <CheckedTextView
+        android:text="menatap wajah ibu / pengasuh "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/check4" />
+
+    <View
+        android:layout_width="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary"
+        />
+
+    <!-- Baris Terakhir -->
+    <TableRow
+        android:id="@+id/tableRowHasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:gravity="center" >
+
+        <ImageButton
+            android:id="@+id/buttonHome"
+            android:src="@drawable/construction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"/>
+
+    </TableRow>
+
+
+</TableLayout>

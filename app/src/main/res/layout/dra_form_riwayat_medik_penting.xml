@@ -1,0 +1,95 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorBg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:shrinkColumns="*"
+        android:stretchColumns="*" >
+
+        <!-- Baris 1 Kolom 1 -->
+
+        <TableRow
+            android:id="@+id/tableRowLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/bayi"
+                android:layout_centerHorizontal="true"
+                />
+        </TableRow>
+        <TextView
+            android:id="@+id/txtlogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Riwayat Medik Penting"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            />
+
+        <!-- Baris 2 Kolom 2 -->
+        <TextView
+            android:id="@+id/alergi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Riwayat alergi obat :"
+            android:textSize="16dp" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:inputType="textMultiLine"
+            android:ems="8"
+            android:id="@+id/editTextAlergi"
+            android:hint="Tulis disini"
+            />
+
+        <TextView
+            android:id="@+id/kesehatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Riwayat penyakit dalam keluarga :"
+            android:textSize="16dp" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:inputType="textMultiLine"
+            android:ems="6"
+            android:id="@+id/editTextPnykt"
+            android:hint="Tulis disini"
+            />
+
+        <!-- Baris 25 Kolom 1 -->
+        <TableRow
+            android:id="@+id/tableRowHasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/buttonHome"
+                android:src="@drawable/construction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"/>
+
+
+        </TableRow>
+
+
+    </TableLayout>
+</ScrollView>

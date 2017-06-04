@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.laili.pasporbayi.TKBActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorBlue"
+                            android:textColor="@color/colorWhite"/>
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Bulan"
+                            android:textAlignment="center"
+                            android:background="@color/colorBlue"
+                            android:textColor="@color/colorWhite"/>
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Bidang"
+                            android:textAlignment="center"
+                            android:background="@color/colorBlue"
+                            android:textColor="@color/colorWhite"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cB1"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="1 bulan"
+                            android:textAlignment="center"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="tangan dan kaki bergerak aktif"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Gerak Kasar"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="kepala menoleh ke samping kanan-kiri"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Gerakan"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="bereaksi pada bunyi lonceng"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Komunikasi/Berbicara"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="kepala menoleh ke samping kanan-kiri"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Sosial dan Kemandirian"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cB2"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="2 bulan"
+                            android:textAlignment="center"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="mengangkat kepala ketika tengkurap"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Gerak Kasar"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="kepala menoleh ke samping kanan-kiri"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Gerakan"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="bersuara"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Komunikasi/Berbicara"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="tersenyum spontan"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Sosial dan Kemandirian"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cB3"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="3 bulan"
+                            android:textAlignment="center"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="kepala tegak ketika didudukan"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Gerak Kasar"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="memegang mainan"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Gerakan"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="tertawa/berteriak"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Komunikasi/Berbicara"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="memandang tangannya"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Sosial dan Kemandirian"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cB4"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="4 bulan"
+                            android:textAlignment="center"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="tengkurap-terlentang sendiri"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Gerak Kasar"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="memegang mainan"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Gerakan"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text=""
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Komunikasi/Berbicara"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text=""
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Sosial dan Kemandirian"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cB5"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="5 bulan"
+                            android:textAlignment="center"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="tangan dan kaki bergerak aktif"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Gerak Kasar"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="meraih, menggapai"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Gerakan"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="menoleh suara"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Komunikasi/Berbicara"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="meraih mainan"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Sosial dan Kemandirian"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cB6"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="6 bulan"
+                            android:textAlignment="center"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="duduk tanpa berpegangan"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Gerak Kasar"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="duduk tanpa berpegangan"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Gerakan"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text=""
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Komunikasi/Berbicara"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="memasukkan biskuit ke mulut"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Sosial dan Kemandirian"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cB7"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="7 bulan"
+                            android:textAlignment="center"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text=""
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Gerak Kasar"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="mengambil dengan tangan kanan dan kiri"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Gerakan"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="bersuara ma.. ma.."
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Komunikasi/Berbicara"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="bersuara ma.. ma.."
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Sosial dan Kemandirian"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cB8"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="8 bulan"
+                            android:textAlignment="center"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="berdiri berpegangan"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Gerak Kasar"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="berdiri berpegangan"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Gerakan"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="bersuara ma.. ma.."
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Komunikasi/Berbicara"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape">
+                        <CheckBox
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="bersuara ma.. ma.."
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Sosial dan Kemandirian"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <TableRow
+                        android:id="@+id/tableRowHasil"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center" >
+
+                        <ImageButton
+                            android:id="@+id/buttonHome"
+                            android:src="@drawable/construction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"/>
+
+                        <ImageButton
+                            android:id="@+id/buttonNext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:src="@drawable/nextpage"
+                            />
+                    </TableRow>
+                </LinearLayout>
+</HorizontalScrollView>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>
+
+

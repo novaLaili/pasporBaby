@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.laili.pasporbayi.TKBActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Tanggal"
+                        android:padding="10dp"
+                        android:textAlignment="center"
+                        android:background="@color/colorBlue"
+                        android:textColor="@color/colorWhite"/>
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Umur"
+                        android:textAlignment="center"
+                        android:background="@color/colorBlue"
+                        android:textColor="@color/colorWhite"/>
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="BB"
+                        android:textAlignment="center"
+                        android:background="@color/colorBlue"
+                        android:textColor="@color/colorWhite"/>
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="PB"
+                        android:textAlignment="center"
+                        android:background="@color/colorBlue"
+                        android:textColor="@color/colorWhite"/>
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="LK"
+                        android:textAlignment="center"
+                        android:background="@color/colorBlue"
+                        android:textColor="@color/colorWhite"/>
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Pemeriksaan"
+                        android:textAlignment="center"
+                        android:background="@color/colorBlue"
+                        android:textColor="@color/colorWhite"/>
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Pengobatan"
+                        android:textAlignment="center"
+                        android:background="@color/colorBlue"
+                        android:textColor="@color/colorWhite"/>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/iDdummy">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

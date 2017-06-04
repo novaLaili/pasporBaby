@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/bayi"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Riwayat Medik Penting"
+        android:layout_gravity="center"
+        />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="3dp"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="3dp"
+            android:layout_height="140dp"
+            android:background="@color/colorPrimary"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Riwayat Alergi Obat : "/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:inputType="textMultiLine"
+            android:ems="8"
+            android:id="@+id/editTextAlergi"
+            android:hint="Tulis disini"
+            />
+        <View
+            android:layout_width="3dp"
+            android:layout_height="140dp"
+            android:background="@color/colorPrimary"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="3dp"
+        android:background="@color/colorPrimary"
+        />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="3dp"
+            android:layout_height="140dp"
+            android:background="@color/colorPrimary"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="18dp"
+            android:text="Riwayat Penyakit Keluarga:"
+            />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:inputType="textMultiLine"
+            android:ems="6"
+            android:id="@+id/editTextPnykt"
+            android:hint="Tulis disini"
+            />
+        <View
+            android:layout_width="3dp"
+            android:layout_height="140dp"
+            android:background="@color/colorPrimary"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="3dp"
+        android:background="@color/colorPrimary"
+        />
+</LinearLayout>

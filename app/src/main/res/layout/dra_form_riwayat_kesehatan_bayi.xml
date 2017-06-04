@@ -1,0 +1,432 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:shrinkColumns="*"
+        android:stretchColumns="*" >
+
+        <!-- Baris 1 Kolom 1 -->
+
+        <TableRow
+            android:id="@+id/tableRowLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/bayi"
+                android:layout_centerHorizontal="true"
+                />
+        </TableRow>
+        <TextView
+            android:id="@+id/txtlogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Riwayat Kesehatan Bayi"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            />
+
+        <!-- Baris 2 Kolom 2 -->
+        <TextView
+            android:id="@+id/kesehatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kesehatan bayi saat lahir :"
+            android:textSize="16dp" />
+        <CheckBox
+            android:text="Normal"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBoxNormal" />
+        <CheckBox
+            android:text="Congenital Heart Disease"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBoxCongenitalHeartDisease" />
+        <CheckBox
+            android:text="Caput Succedanium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:id="@+id/checkBoxCaput" />
+        <CheckBox
+            android:text="Jaundice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:id="@+id/checkBoxPostJaundice" />
+        <CheckBox
+            android:text="Cephal Hematome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:id="@+id/checkBoxCephal" />
+        <CheckBox
+            android:text="Respiratory Distress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:id="@+id/checkBoxRespiratory" />
+        <TableRow>
+        <CheckBox
+            android:text="lain-lain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:id="@+id/checkBoxPostlain2" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:id="@+id/textTextPostlain2"/>
+        </TableRow>
+        <!-- Baris 3 Kolom 3 -->
+        <TextView
+            android:id="@+id/ruang_bayi"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kesehatan bayi selama di ruang bayi :"
+            android:textSize="16dp" />
+        <TableRow
+            android:id="@+id/tableRow7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:id="@+id/checkBoxNormalRB" />
+            <CheckBox
+                android:text="Kesulitan Minum"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBoxKesmin" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="Hyperbilirunemia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:id="@+id/checkBoxHyper" />
+            <CheckBox
+                android:text="lain-lain"
+                android:layout_width="wrap_content"
+                android:textSize="12dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBoxlain" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow8a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:textSize="12dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextLain" />
+        </TableRow>
+
+        <!-- Baris 9 Kolom 9 -->
+        <TextView
+            android:id="@+id/pengobatan"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="Pengobatan yang telah diberikan :"
+            android:textSize="16dp" />
+        <TableRow
+            android:id="@+id/tableRow9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="Vitamin K"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:id="@+id/checkBoxVitK" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="mg"
+                android:id="@+id/editTextVitK"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="Questran : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:id="@+id/checkBoxQue" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextQue"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="Light Therapy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:id="@+id/checkBoxLight" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="jam"
+                android:id="@+id/editTextLight"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="lain-lain :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:id="@+id/checkBoxlain_pengobatan" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextlain_pengobatan"/>
+        </TableRow>
+        <!-- Baris 13 Kolom 13 -->
+        <TextView
+            android:id="@+id/lab"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="Pemeriksaan laboratorium :"
+            android:textSize="16dp" />
+        <TableRow
+            android:id="@+id/tableRow13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="1. Darah Lengkap :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:id="@+id/darah" />
+            <CheckBox
+                android:text="HB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:id="@+id/checkBoxHB" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text=" "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:text="HT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:id="@+id/checkBoxHT" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text=" "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:text="Lekosit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:id="@+id/checkBoxLekosit" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text=" "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:text="Thrombosit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:id="@+id/checkBoxThrombosit" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:text="Lain : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:id="@+id/checkBoxlain_lab" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"/>
+            <EditText
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:id="@+id/checkBoxIsi_lain" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="2. Bilirubin : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:id="@+id/bilirubin" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:text="Tgl."
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:id="@+id/editTextTglBilirubin"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text=" "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:text="Tgl."
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:id="@+id/editTextTglBilirubin2"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="3. TORCH :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextTORCH"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="4. Lain-lain :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextLainLab"/>
+        </TableRow>
+        <TextView
+            android:text="Pemeriksaan lain-lain"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/periksalain"
+            android:textSize="16dp"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextPeriksaLain"/>
+
+        <!-- Baris 25 Kolom 1 -->
+        <TableRow
+            android:id="@+id/tableRowHasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/buttonHome"
+                android:src="@drawable/construction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"/>
+
+            <ImageButton
+                android:id="@+id/buttonNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/nextpage"
+                />
+        </TableRow>
+
+
+    </TableLayout>
+</ScrollView>

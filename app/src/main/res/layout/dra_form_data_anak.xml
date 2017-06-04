@@ -1,0 +1,1041 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:shrinkColumns="*"
+    android:stretchColumns="*" >
+
+    <!--&lt;!&ndash; Baris 1 Kolom 1 &ndash;&gt;-->
+
+    <TableRow
+        android:id="@+id/tableRowLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/bayi"
+            android:layout_centerHorizontal="true"
+            />
+    </TableRow>
+
+    <TextView
+        android:id="@+id/txtlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data Anak"
+        android:gravity="center"
+        />
+
+    <!--Baris 2 Kolom 2 -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow2a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama : "
+            android:textSize="16dp" />
+    </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/editTextNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama"
+            android:ems="10" >
+        </EditText>
+        </TableRow>
+    </RelativeLayout>
+    <!-- Baris 3 Kolom 3 -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow3a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/tglLahir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Lahir : "
+            android:textSize="16dp" />
+        </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/calenderTgl"
+            android:onClick="setDate"
+            android:padding="10dp"
+            android:text="@string/date_selected"
+            android:hint="Tanggal Lahir"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </TableRow>
+    </RelativeLayout>
+    <!-- Baris 4 Kolom 4 -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow4a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/waktu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waktu : "
+            android:textSize="16dp" />
+    </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/editTextwaktu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Waktu"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    </RelativeLayout>
+
+    <!-- Baris 5 Kolom 5 -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow5a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/DAberat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Berat : "
+            android:textSize="16dp" />
+    </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editTextDABerat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Berat"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    </RelativeLayout>
+
+    <!-- Baris 6 Kolom 6 -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow6a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/panjang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Panjang : "
+            android:textSize="16dp" />
+    </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/editTextpanjang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Panjang"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    </RelativeLayout>
+
+    <!-- Baris 7 Kolom 7 -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow7a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/LK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lingkar Kepala : "
+            android:textSize="16dp" />
+    </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/editTextLK"
+            android:layout_width="match_parent"
+            android:hint="Lingkar Kepala"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    </RelativeLayout>
+    <!-- Baris 8 Kolom 8 -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow8a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/tmptLahir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tempat Lahir : "
+            android:textSize="16dp" />
+    </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/editTexttmptLahir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tempat Lahir"
+            android:ems="10"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    </RelativeLayout>
+
+    <!-- Baris 9 Kolom 9 -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow9a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/rumahSakit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rumah Sakit : "
+            android:textSize="16dp" />
+    </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/editTextRS"
+            android:hint="Rumah Sakit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    </RelativeLayout>
+    <!-- Baris 10 Kolom 10 -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow10a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/namaAyah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Ayah : "
+            android:textSize="16dp" />
+    </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/editTextNamaAyah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Ayah"
+            android:ems="10"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    </RelativeLayout>
+
+    <!-- Baris 11 Kolom 11 -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow11a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/tgl_lahir_Ayah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal lahir : "
+            android:textSize="16dp" />
+    </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableRow
+            android:id="@+id/tableRow11b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/calenderTglLahirAyah"
+                android:onClick="setDate"
+                android:text="@string/date_selected"
+                android:ems="10"
+                android:hint="Tanggal Lahir"
+                android:padding="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:id="@+id/tempatLahirAyah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tempat Lahir : "
+                android:textSize="16dp" />
+        </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/editTexttgl_lahir_Ayah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tempat Lahir"
+            android:ems="10"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    </RelativeLayout>
+
+    <!-- Baris 11 Kolom 11 -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableRow
+            android:id="@+id/tableRow11a5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:id="@+id/tempat_lahir_Ayah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal lahir : "
+                android:textSize="16dp" />
+        </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableRow
+            android:id="@+id/tableRow11.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <EditText
+                android:id="@+id/editTexttempat_lahir_Ayah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tempat Lahir"
+                android:ems="10"
+                android:inputType="textPersonName" >
+            </EditText>
+        </TableRow>
+    </RelativeLayout>
+
+    <!-- Baris 12 Kolom 12 -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow12a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/pekerjaanAyah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pekerjaan : "
+            android:textSize="16dp" />
+    </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/editTextpekerjaanAyah"
+            android:hint="Pekerjaan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    </RelativeLayout>
+    <!-- Baris 13 Kolom 13 -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow13a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/alamatKantorAyah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat Kantor : "
+            android:textSize="16dp" />
+    </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/editTextAlamatKantorAyah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Alamat Kantor"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    </RelativeLayout>
+    <!-- Baris 14 Kolom 14 -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow14a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/telpKntrAyah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telepon Kantor : "
+            android:textSize="16dp" />
+    </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/editTextTelpKntrAyah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Telepon Kantor"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    </RelativeLayout>
+
+    <!-- Baris 15 Kolom 15 -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow15a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/telpSelulerAyah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telepon Seluler : "
+            android:textSize="16dp" />
+    </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/editTextTelpSllerAyah"
+            android:hint="Telepon Seluler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    </RelativeLayout>
+    <!-- Baris 16 Kolom 16 -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow16a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/namaIbu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Ibu : "
+            android:textSize="16dp" />
+    </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/editTextNamaIbu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nama Ibu"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    </RelativeLayout>
+    <!-- Baris 17 Kolom 17 -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow17a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/tgl_lahir_Ibu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal lahir : "
+            android:textSize="16dp" />
+    </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:layout_width="match_parent"
+            android:hint="Tanggal Lahir"
+            android:layout_height="wrap_content"
+            android:id="@+id/calenderTglLahirIbu"
+            android:onClick="setDate"
+            android:padding="10dp"
+            android:text="@string/date_selected"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableRow
+            android:id="@+id/tableRow17a5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:id="@+id/tempat_lahir_Ibu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tempat lahir : "
+                android:textSize="16dp" />
+        </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableRow
+            android:id="@+id/tableRow17.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <EditText
+                android:id="@+id/editTexttempat_lahir_ibu"
+                android:layout_width="match_parent"
+                android:hint="Tempat Lahir"
+                android:layout_height="wrap_content"
+                android:ems="12"
+                android:inputType="textPersonName" >
+            </EditText>
+        </TableRow>
+    </RelativeLayout>
+
+    <!-- Baris 18 Kolom 18 -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow18a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/pekerjaanIbu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pekerjaan Ibu : "
+            android:textSize="16dp" />
+    </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/editTextpekerjaanIbu"
+            android:hint="Pekerjaan Ibu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    </RelativeLayout>
+
+    <!-- Baris 19 Kolom 19 -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow19a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/almtKntorIbu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat Kantor : "
+            android:textSize="16dp" />
+    </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow19"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/editTextAlamatKantorIbu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Alamat Kantor"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    </RelativeLayout>
+    <!-- Baris 20 Kolom 20 -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow20a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/tlpKantorIbu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telepon Kantor : "
+            android:textSize="16dp" />
+        </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/editTextTlpKantorIbu"
+            android:layout_width="match_parent"
+            android:hint="Telepon Kantor"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    </RelativeLayout>
+    <!-- Baris 21 Kolom 21 -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow21a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/tlpselIbu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telepon Seluler : "
+            android:textSize="16dp" />
+        </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow21"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/editTextTelpSllerIbu"
+            android:layout_width="match_parent"
+            android:hint="Telepon Seluler"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+     <!-- Baris 22 Kolom 22 -->
+
+    <TableRow
+        android:id="@+id/tableRow22"
+        android:layout_width="match_parent"
+        android:paddingTop="20dp"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/namaDktrKandungan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Dokter Kandungan yang Membantu Kelahiran : "
+            android:textSize="16dp" />
+    </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow221"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/editNamaDktrKndungan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:ems="10"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    </RelativeLayout>
+
+    <!-- Baris 23 Kolom 23 -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow23"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/namaDktrAnak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Dokter Anak yang membantu Kelahiran : "
+            android:textSize="16dp" />
+    </TableRow>
+    </RelativeLayout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow231"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/editTextNamaDktrAnak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+    </RelativeLayout>
+    <!-- Baris 24 Kolom 24 -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow24"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/kondisi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi atau Saran Khusus yang Diberikan : "
+            android:textSize="16dp" />
+    </TableRow>
+    </RelativeLayout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/tableRow241"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <EditText
+            android:id="@+id/editTextKondisi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" >
+        </EditText>
+    </TableRow>
+
+    </RelativeLayout>
+    <!-- Baris 25 Kolom 1 -->
+    <TableRow
+        android:id="@+id/tableRowHasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <ImageButton
+            android:id="@+id/buttonHome"
+            android:src="@drawable/construction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"/>
+
+        <ImageButton
+            android:id="@+id/buttonNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:src="@drawable/nextpage"
+            />
+    </TableRow>
+
+
+</TableLayout>
+</ScrollView>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_opsi_status_gizi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.laili.pasporbayi.OpsiStatusGiziActivity">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:padding="10dp"
+            android:scaleType="fitCenter" />
+        <android.support.v4.widget.Space
+            android:layout_width="10dp"
+            android:layout_height="0dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/BBUmur"
+            android:textColor="@color/colorWhite"
+            android:text="Berat Badan Menurut Umur"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/colorBlue"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:id="@+id/imageView1"
+                />
+            <android.support.v4.widget.Space
+                android:layout_width="10dp"
+                android:layout_height="0dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:id="@+id/TBUmur"
+            android:text="Tinggi Badan Menurut Umur"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/colorBlue"
+            />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:id="@+id/imageView2" />
+            <android.support.v4.widget.Space
+                android:layout_width="10dp"
+                android:layout_height="0dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/LKUmur"
+                android:textColor="@color/colorWhite"
+                android:text="Lingkar Kepala Menurut Umur"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/colorBlue"
+            />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:padding="10dp"
+                android:scaleType="fitCenter" />
+            <android.support.v4.widget.Space
+                android:layout_width="10dp"
+                android:layout_height="0dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/BBTinggi"
+                android:text="Berat Badan Menurut Tinggi Badan"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/colorBlue"
+            />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:padding="10dp"
+                android:scaleType="fitCenter" />
+            <android.support.v4.widget.Space
+                android:layout_width="10dp"
+                android:layout_height="0dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/BBTBUmur"
+                    android:text="Berat dan Tinggi Badan terhadap Umur"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textSize="20dp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/colorBlue"
+            />
+
+
+
+</LinearLayout>
+</LinearLayout>
