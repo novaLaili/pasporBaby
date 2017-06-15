@@ -29,8 +29,8 @@ import java.util.Map;
 public class DataAnakActivity extends AppCompatActivity implements View.OnClickListener  {
     SharedPrefManager manager;
     EditText nama, waktu, berat, panjang, LK, tempat_lahir, RS,
-            nama_ayah, tgl_lahir_ayah, tempat_lahir_ayah, pekerjaan_ayah, alamat_kantor_ayah,
-            tlp_kantor_ayah, tlp_seluler_ayah, nama_ibu, tgl_lahir_ibu, tempat_lahir_ibu, pekerjaan_ibu,
+            nama_ayah, tempat_lahir_ayah, pekerjaan_ayah, alamat_kantor_ayah,
+            tlp_kantor_ayah, tlp_seluler_ayah, nama_ibu, tempat_lahir_ibu, pekerjaan_ibu,
             alamat_kantor_ibu, tlp_kantor_ibu, tlp_seluler_ibu, nama_dktr_kandungan, nama_dktr_anak, kondisi_saran;
 
     private Calendar calendar;
@@ -42,6 +42,7 @@ public class DataAnakActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dra_form_data_anak);
 
+        SearchID();
         manager = SharedPrefManager.getmInstance(this);
 
         calendar = Calendar.getInstance();
@@ -70,7 +71,7 @@ public class DataAnakActivity extends AppCompatActivity implements View.OnClickL
                 }
             }
         });
-        SearchID();
+
     }
 
     void SearchID(){
@@ -129,24 +130,17 @@ public class DataAnakActivity extends AppCompatActivity implements View.OnClickL
         final String vKondisi= kondisi_saran.getText().toString().trim();
 
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.252.129.206/pasporBayi_TA/form_data_anak.php",
-        //StringRequest stringRequest = new StringRequest(Request.Method.POST, "http:///192.168.0.105/pasporBayi_TA/form_data_anak.php",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.1.177/pasporBayi_TA/form_data_anak.php",
+//        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.100/pasporBayi_TA/form_data_anak.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         if(!response.equals("oops! Please try again")){
-                            Intent openDAActivity = new Intent(DataAnakActivity.this, RiwayatKelahiranActivity.class);
-                            startActivity(openDAActivity);
-                        }
-                        else {
-                            Intent openDAActivity = new Intent(DataAnakActivity.this, RiwayatKelahiranActivity.class);
                             Config.SetString(DataAnakActivity.this, "id_anak", response);
                             Log.d("id_anak",response);
+                            Intent openDAActivity = new Intent(DataAnakActivity.this, RiwayatKelahiranActivity.class);
                             startActivity(openDAActivity);
                         }
-                        //Toast.makeText(DataAnakActivity.this, response, Toast.LENGTH_SHORT).show();
-//                        Toast.makeText(PendaftaranActivity.this,response,Toast.LENGTH_LONG).show();
-
                     }
                 },
                 new Response.ErrorListener() {
@@ -197,7 +191,7 @@ public class DataAnakActivity extends AppCompatActivity implements View.OnClickL
     @SuppressWarnings("deprecation")
     public void setDate(View view) {
         showDialog(999);
-        Toast.makeText(getApplicationContext(), "ca",
+        Toast.makeText(getApplicationContext(), "calender",
                 Toast.LENGTH_SHORT)
                 .show();
     }

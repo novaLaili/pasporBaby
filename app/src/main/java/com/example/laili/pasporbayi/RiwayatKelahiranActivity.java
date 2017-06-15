@@ -39,7 +39,7 @@ public class RiwayatKelahiranActivity extends AppCompatActivity implements View.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dra_form_riwayat_kelahiran);
+        setContentView(R.layout.form_riwayat_kelahiran);
 
         manager = SharedPrefManager.getmInstance(this);
 
@@ -324,75 +324,6 @@ public class RiwayatKelahiranActivity extends AppCompatActivity implements View.
     }
 
     private void InputData() {
-//        if (checkbox1.isChecked()) {
-//            kondisiLahir = "Aterm";
-//        } else if (checkbox3.isChecked()) {
-//            kondisiLahir = "Dysmature";
-//        } else if (checkbox2.isChecked()) {
-//            kondisiLahir = "Premature";
-//        } else if (checkbox4.isChecked()) {
-//            kondisiLahir = "PostMature";
-//        }
-//
-//        if (checkboxLJ1.isChecked()) {
-//            letakJanin = "Kepala";
-//        } else if (checkboxLJ2.isChecked()) {
-//            letakJanin = "Bokong";
-//        } else if (checkboxLJ3.isChecked()) {
-//            letakJanin = "Lintang";
-//        } else if (checkboxLJ4.isChecked()) {
-//            letakJanin = "Lain-lain";
-//        }
-//
-//        if (checkboxCL1.isChecked()) {
-//            caraLahir = "Partus Spontan";
-//        } else if (checkboxCL2.isChecked()) {
-//            caraLahir = "Spontan Sungsang";
-//        } else if (checkboxCL3.isChecked()) {
-//            caraLahir = "Vacuum Extraksi";
-//        } else if (checkboxCL4.isChecked()) {
-//            caraLahir = "Forcep Extraksi";
-//        } else if (checkboxCL5.isChecked()) {
-//            caraLahir = "Versi Ekstraksi";
-//        } else if (checkboxCL6.isChecked()) {
-//            caraLahir = "Sectio Caesaria";
-//        }
-//
-//
-//        if (checkboxL1.isChecked()) {
-//            lilitan = "Kepala";
-//        } else if (checkboxL2.isChecked()) {
-//            lilitan = "Bokong";
-//        }
-//
-//        if (checkboxP1.isChecked()) {
-//            prolaps = "Ada";
-//        } else if (checkboxP2.isChecked()) {
-//            prolaps = "Tidak Ada";
-//        }
-//
-//        if (checkBoxI1.isChecked()) {
-//            insersi = "Ada";
-//        } else if (checkBoxI2.isChecked()) {
-//            insersi = "Ada";
-//        }
-//
-//        if (checkBoxJ1.isChecked()) {
-//            jumlahAirKetuban = "Normal";
-//        } else if (checkBoxJ2.isChecked()) {
-//            jumlahAirKetuban = "Hydramnion";
-//        } else if (checkBoxJ3.isChecked()) {
-//            jumlahAirKetuban = "Oligamnion";
-//        grupKondisiLahir =  (RadioGroup)findViewById(R.id.group1);
-//        grupLetakJanin = (RadioGroup) findViewById(R.id.group2);
-//        grupCaraLahir = (RadioGroup) findViewById(R.id.group3);
-//        grupLilitan = (RadioGroup) findViewById(R.id.group4);
-//        grupProlaps = (RadioGroup) findViewById(R.id.group5);
-//        grupInsersi = (RadioGroup) findViewById(R.id.groupInsersi);
-//        grupJumlah = (RadioGroup) findViewById(R.id.group6);
-
-        //grupLetakJanin, grupCaraLahir, grupLilitan, grupProlaps, grupInsersi, grupJumlah;
-
             int RadiobuttonKondisiLahir = grupKondisiLahir.getCheckedRadioButtonId();
             int RadiobuttonLetakJanin = grupKondisiLahir.getCheckedRadioButtonId();
             int RadiobuttonCaraLahir = grupKondisiLahir.getCheckedRadioButtonId();
@@ -435,20 +366,16 @@ public class RiwayatKelahiranActivity extends AppCompatActivity implements View.
             final String vGoldar = goldar.getText().toString().trim();
 
 
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.252.126.206/pasporBayi_TA/form_riwayat_kelahiran.php",
-            //StringRequest stringRequest = new StringRequest(Request.Method.POST, "http:///192.168.0.105/pasporBayi_TA/form_riwayat_kelahiran.php",
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.1.177/pasporBayi_TA/form_riwayat_kelahiran.php",
+//            StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.100/pasporBayi_TA/form_riwayat_kelahiran.php",
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
                             if (!response.equals("oops! Please try again")) {
-                                Intent openRKAActivity = new Intent(RiwayatKelahiranActivity.this, RiwayatKesehatanActivity.class);
-                                startActivity(openRKAActivity);
-                            }
-                            else {
-                                Intent openDAActivity = new Intent(RiwayatKelahiranActivity.this, RiwayatKesehatanActivity.class);
                                 Config.SetString(RiwayatKelahiranActivity.this, "id_riwayat_kelahiran", response);
                                 Log.d("id_riwayat_kelahiran",response);
-                                startActivity(openDAActivity);
+                                Intent openRKAActivity = new Intent(RiwayatKelahiranActivity.this, RiwayatKesehatanActivity.class);
+                                startActivity(openRKAActivity);
                             }
 //                        Toast.makeText(PendaftaranActivity.this,response,Toast.LENGTH_LONG).show();
 
@@ -464,6 +391,7 @@ public class RiwayatKelahiranActivity extends AppCompatActivity implements View.
                 @Override
                 protected Map<String, String> getParams() {
                     Map<String, String> params = new HashMap<String, String>();
+                    params.put("id_anak",""+manager.getUserId());
                     params.put("tanggal_lahir", vTanggal_lahir);
                     params.put("nama_RS", vNama_RS);
                     params.put("penolong_persalinan_DokterAnak", vPenolong_persalinan_DokterAnak);
@@ -487,7 +415,6 @@ public class RiwayatKelahiranActivity extends AppCompatActivity implements View.
                     params.put("placenta_berat", vPlacenta_berat);
                     params.put("placenta_kelahiran", vPlacenta_kelahiran);
                     params.put("goldar", vGoldar);
-                    params.put("id_anak",""+manager.getUserId());
                     Log.d("ID", ""+manager.getUseId());
                     return params;
 

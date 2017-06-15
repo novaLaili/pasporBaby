@@ -76,8 +76,8 @@ public class PendaftaranActivity extends AppCompatActivity implements View.OnCli
         });
 
 
-//        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.252.131.202/pasporBayi_TA/register.php",
-                StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.1.112/pasporBayi_TA/register.php",
+        //StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.252.132.183/pasporBayi_TA/register.php",
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.1.177/pasporBayi_TA/register.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

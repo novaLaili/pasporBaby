@@ -113,8 +113,8 @@ public class LoginPageActivity extends AppCompatActivity {
         final String vPassword = password.getText().toString().trim();
 
 
-        //StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.252.132.183/pasporBayi_TA/login.php",
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.108/pasporBayi_TA/login.php",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.1.177/pasporBayi_TA/login.php",
+//        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.100/pasporBayi_TA/login.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

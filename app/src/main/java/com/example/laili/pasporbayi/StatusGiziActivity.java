@@ -39,19 +39,19 @@ public class StatusGiziActivity extends AppCompatActivity implements View.OnClic
         berat = (EditText) findViewById(R.id.editTextberat);
         tinggi = (EditText) findViewById(R.id.editTextTinggi);
         lingkar_kepala = (EditText) findViewById(R.id.editTextLK);
+
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.buttonHasilSG:
-                StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.108/pasporBayi_TA/form_status_gizi.php",
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.1.177/pasporBayi_TA/form_status_gizi.php",
                         //StringRequest stringRequest = new StringRequest(Request.Method.POST, "http:///192.168.0.105/pasporBayi_TA/form_data_anak.php",
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
                                 if(!response.equals("oops! Please try again")){
-                                    Intent openHasilSGActivity = new Intent(StatusGiziActivity.this, HasilStatusGiziActivity.class);
                                     final Bundle bundle = new Bundle();
                                     bundle.putString("jenis_kelamin", jenis_kelamin.getText().toString());
                                     bundle.putInt("tahun", Integer.parseInt(umurTahun.getText().toString()) );
@@ -59,11 +59,11 @@ public class StatusGiziActivity extends AppCompatActivity implements View.OnClic
                                     bundle.putDouble("berat", Double.parseDouble(berat.getText().toString()));
                                     bundle.putDouble("tinggi", Double.parseDouble(tinggi.getText().toString()));
                                     bundle.putDouble("lingkar_kepala", Double.parseDouble(lingkar_kepala.getText().toString()));
+                                    Intent openHasilSGActivity = new Intent(StatusGiziActivity.this, HasilStatusGiziActivity.class);
                                     openHasilSGActivity.putExtras(bundle);//put Extras fungsinya untuk melemparkan data antara activity status gizi ke hasilstatusgizi
                                     startActivity(openHasilSGActivity);
                                 }
                                 else {
-                                    Intent openHasilSGActivity = new Intent(StatusGiziActivity.this, HasilStatusGiziActivity.class);
                                     final Bundle bundle = new Bundle();
                                     bundle.putString("jenis_kelamin", jenis_kelamin.getText().toString());
                                     bundle.putInt("tahun", Integer.parseInt(umurTahun.getText().toString()) );
@@ -71,6 +71,7 @@ public class StatusGiziActivity extends AppCompatActivity implements View.OnClic
                                     bundle.putDouble("berat", Double.parseDouble(berat.getText().toString()));
                                     bundle.putDouble("tinggi", Double.parseDouble(tinggi.getText().toString()));
                                     bundle.putDouble("lingkar_kepala", Double.parseDouble(lingkar_kepala.getText().toString()));
+                                    Intent openHasilSGActivity = new Intent(StatusGiziActivity.this, HasilStatusGiziActivity.class);
                                     openHasilSGActivity.putExtras(bundle);//put Extras fungsinya untuk melemparkan data antara activity status gizi ke hasilstatusgizi
                                     Config.SetString(StatusGiziActivity.this, "id_anak", response);
                                     Log.d("id_anak",response);
