@@ -34,6 +34,7 @@ public class LoginPageActivity extends AppCompatActivity {
     Button regis;
     EditText username;
     EditText password;
+    String match;
 
     private GoogleApiClient client;
 
@@ -113,23 +114,33 @@ public class LoginPageActivity extends AppCompatActivity {
         final String vPassword = password.getText().toString().trim();
 
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.1.177/pasporBayi_TA/login.php",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.103/pasporBayi_TA/login.php",
 //        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.100/pasporBayi_TA/login.php",
                 new Response.Listener<String>() {
                     @Override
-                    public void onResponse(String response) {
+                    public void onResponse(final String response) {
                         if(response.equals("failure")){
                             makeText(getApplicationContext(), "Invalid username or password", Toast.LENGTH_SHORT).show();
 
                         } else {
-                            Intent openDDAActivity = new Intent(LoginPageActivity.this, NavActivity.class);
-                            Config.SetString(LoginPageActivity.this, "id_user", response);
-                            Log.d("id_user",response);
-                            startActivity(openDDAActivity);
-                            finish();
-                        }
-//                        Toast.makeText(PendaftaranActivity.this,response,Toast.LENGTH_LONG).show();
+                            String arr[] = response.split("_", 2);
 
+                            String id_user = arr[0];   //the
+                            String match = arr[1];
+                            Log.d("match", match);
+                            Log.d("id_user", id_user);
+
+                            Config.SetString(LoginPageActivity.this, "id_user", id_user);
+                            Config.SetString(LoginPageActivity.this, "id_anak", id_user);
+
+                            if(match.equals("ADA")){
+                                startActivity( new Intent(LoginPageActivity.this, NavActivity.class));
+                                finish();
+                            } else if (match.equals("BELUM")){
+                                startActivity(new Intent(LoginPageActivity.this, DataAnakActivity.class));
+                                finish();
+                            }
+                        }
                     }
                 },
                 new Response.ErrorListener() {

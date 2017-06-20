@@ -63,13 +63,13 @@
         <activity android:name=".CatatanImunisasiActivity" />
         <activity android:name=".Config" />
         <activity android:name=".RekapDataAnak" />
-        <activity android:name=".TimePickerFragment" />
         <activity android:name=".OpsiStatusGiziActivity" />
         <activity android:name=".HasilStatusGiziBBUmurActivity" />
         <activity android:name=".ExpandableListAdapter" />
         <activity android:name=".MainTumbuhKembangActivity" />
         <activity android:name=".MainImunisasiActivity" />
-        <activity android:name=".RekapTumbuhKembangActivity"></activity>
+        <activity android:name=".RekapTumbuhKembangActivity" />
+        <activity android:name=".MainPenyakitYgPernahDideritaActivity"></activity>
     </application>
 
 </manifest>

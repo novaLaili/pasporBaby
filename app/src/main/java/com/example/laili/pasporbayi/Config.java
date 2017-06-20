@@ -11,8 +11,8 @@ public class Config extends Activity {
     static SharedPreferences settings;
     static SharedPreferences.Editor editor;
     //public static final String DATA_URL = "http:///192.168.0.105/pasporBayi_TA/data_anak.php?id_user=";
-    public static final String DATA_URL = "http://192.168.0.100/pasporBayi_TA/data_anak.php?id_user=";
-    public static final String DATA_URL_ANAK = "http://192.168.0.100/pasporBayi_TA/riwayat_kelahiran.php?id_anak=";
+    public static final String DATA_URL = "http://192.168.0.103/pasporBayi_TA/data_anak.php?id_user=";
+    public static final String DATA_URL_ANAK = "http://192.168.0.103/pasporBayi_TA/riwayat_kelahiran.php?id_anak=";
     public static final String JSON_ARRAY = "result";
 
     public static void SetString(Activity act, String key, String value){
