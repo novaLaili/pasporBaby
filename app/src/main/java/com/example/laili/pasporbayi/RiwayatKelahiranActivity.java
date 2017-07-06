@@ -1,13 +1,10 @@
 package com.example.laili.pasporbayi;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
@@ -132,7 +129,7 @@ public class RiwayatKelahiranActivity extends AppCompatActivity implements View.
             final String vGoldar = goldar.getText().toString().trim();
 
 
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.103/pasporBayi_TA/form_riwayat_kelahiran.php",
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.252.130.173/pasporBayi_TA/form_riwayat_kelahiran.php",
 //            StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.100/pasporBayi_TA/form_riwayat_kelahiran.php",
                     new Response.Listener<String>() {
                         @Override

@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RiwayatPenyakitYgPernahDideritaActivity extends AppCompatActivity implements View.OnClickListener {
+public class Main2Activity extends AppCompatActivity implements View.OnClickListener {
 
     CheckBox chk1, chk2, chk3, chk4, chk5, chk6, chk7, chk8, chk9, chk10, chk11, chk12, chk13, chk14, chk15, chk16;
     Button btn;
@@ -152,7 +152,7 @@ public class RiwayatPenyakitYgPernahDideritaActivity extends AppCompatActivity i
                     @Override
                     public void onResponse(String response) {
                         if(!response.equals("oops! Please try again")){
-                            Intent openDAActivity = new Intent(RiwayatPenyakitYgPernahDideritaActivity.this, NavActivity.class);
+                            Intent openDAActivity = new Intent(Main2Activity.this, MainActivity.class);
                             startActivity(openDAActivity);
                         }
                     }
@@ -161,16 +161,16 @@ public class RiwayatPenyakitYgPernahDideritaActivity extends AppCompatActivity i
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Log.d("Test", "Ini request error " +error.getMessage());
-                        Toast.makeText(RiwayatPenyakitYgPernahDideritaActivity.this,error.toString(),Toast.LENGTH_LONG).show();
+                        Toast.makeText(Main2Activity.this,error.toString(),Toast.LENGTH_LONG).show();
                     }
                 }){
             @Override
             protected Map<String,String> getParams(){
                 Map<String,String> params = new HashMap<String, String>();
-                String id_user = Config.GetString(RiwayatPenyakitYgPernahDideritaActivity.this, "id_user");
+                String id_user = Config.GetString(Main2Activity.this, "id_user");
                 params.put("id_anak", id_user);
                 for (String str : list){
-                    params.put("nama_penyakit", list.toString());
+                params.put("nama_penyakit", list.toString());
                 }
 
                 return params;

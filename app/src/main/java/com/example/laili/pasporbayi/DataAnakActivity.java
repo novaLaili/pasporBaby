@@ -2,13 +2,11 @@ package com.example.laili.pasporbayi;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
-import android.app.TimePickerDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -130,7 +128,7 @@ public class DataAnakActivity extends AppCompatActivity implements View.OnClickL
         final String vKondisi= kondisi_saran.getText().toString().trim();
 
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.103/pasporBayi_TA/form_data_anak.php",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.252.130.173/pasporBayi_TA/form_data_anak.php",
 //        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.100/pasporBayi_TA/form_data_anak.php",
                 new Response.Listener<String>() {
                     @Override

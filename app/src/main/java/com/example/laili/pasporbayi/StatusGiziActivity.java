@@ -1,9 +1,8 @@
 package com.example.laili.pasporbayi;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -57,7 +56,7 @@ public class StatusGiziActivity extends AppCompatActivity implements View.OnClic
         final String vTB = tinggi.getText().toString().trim();
         final String vLK = lingkar_kepala.getText().toString().trim();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.103/pasporBayi_TA/form_status_gizi.php",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.43.50/pasporBayi_TA/form_status_gizi.php",
                 //StringRequest stringRequest = new StringRequest(Request.Method.POST, "http:///192.168.0.105/pasporBayi_TA/form_data_anak.php",
                 new Response.Listener<String>() {
                     @Override
@@ -70,9 +69,13 @@ public class StatusGiziActivity extends AppCompatActivity implements View.OnClic
                             bundle.putDouble("berat", Float.parseFloat(berat.getText().toString()));
                             bundle.putDouble("tinggi", Float.parseFloat(tinggi.getText().toString()));
                             bundle.putDouble("lingkar_kepala", Float.parseFloat(lingkar_kepala.getText().toString()));
-                            Intent openHasilSGActivity = new Intent(StatusGiziActivity.this, OpsiStatusGiziActivity.class);
+                            System.out.print(jenis_kelamin.getText().toString());
+                            System.out.print(umurBulan.getText().toString());
+                            System.out.print(umurTahun.getText().toString());
+                            Intent openHasilSGActivity = new Intent(StatusGiziActivity.this, HasilStatusGiziActivity.class);
                             openHasilSGActivity.putExtras(bundle);//put Extras fungsinya untuk melemparkan data antara activity status gizi ke hasilstatusgizi
                             startActivity(openHasilSGActivity);
+
                         }
                         //Toast.makeText(DataAnakActivity.this, response, Toast.LENGTH_SHORT).show();
 //                        Toast.makeText(PendaftaranActivity.this,response,Toast.LENGTH_LONG).show();

@@ -69,7 +69,8 @@
         <activity android:name=".MainTumbuhKembangActivity" />
         <activity android:name=".MainImunisasiActivity" />
         <activity android:name=".RekapTumbuhKembangActivity" />
-        <activity android:name=".MainPenyakitYgPernahDideritaActivity"></activity>
+        <activity android:name=".MainPenyakitYgPernahDideritaActivity" />
+        <activity android:name=".Main2Activity"></activity>
     </application>
 
 </manifest>

@@ -1,11 +1,9 @@
 package com.example.laili.pasporbayi;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -114,7 +112,7 @@ public class LoginPageActivity extends AppCompatActivity {
         final String vPassword = password.getText().toString().trim();
 
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.103/pasporBayi_TA/login.php",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.252.130.173/pasporBayi_TA/login.php",
 //        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.100/pasporBayi_TA/login.php",
                 new Response.Listener<String>() {
                     @Override
@@ -135,6 +133,7 @@ public class LoginPageActivity extends AppCompatActivity {
 
                             if(match.equals("ADA")){
                                 startActivity( new Intent(LoginPageActivity.this, NavActivity.class));
+//                                startActivity( new Intent(LoginPageActivity.this, Main2Activity.class));
                                 finish();
                             } else if (match.equals("BELUM")){
                                 startActivity(new Intent(LoginPageActivity.this, DataAnakActivity.class));

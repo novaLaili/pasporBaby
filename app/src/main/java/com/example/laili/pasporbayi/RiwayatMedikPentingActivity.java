@@ -57,7 +57,7 @@ public class RiwayatMedikPentingActivity extends AppCompatActivity implements Vi
         final String vAlergi = alergi.getText().toString();
         final String vPenyakit = penyakit.getText().toString();
 
-    StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.103/pasporBayi_TA/form_riwayat_medik_penting.php",
+    StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.252.130.173/pasporBayi_TA/form_riwayat_medik_penting.php",
 //            StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.100/pasporBayi_TA/form_riwayat_kelahiran.php",
             new Response.Listener<String>() {
                 @Override
