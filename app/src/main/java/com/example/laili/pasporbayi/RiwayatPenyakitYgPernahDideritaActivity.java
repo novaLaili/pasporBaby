@@ -146,7 +146,7 @@ public class RiwayatPenyakitYgPernahDideritaActivity extends AppCompatActivity i
 //            vPenyakit = txt.getText().toString() + " , " + str;
 //        }
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.101/pasporBayi_TA/riwayat_penyakit.php",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.102/pasporBayi_TA/riwayat_penyakit.php",
 //        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.100/pasporBayi_TA/form_data_anak.php",
                 new Response.Listener<String>() {
                     @Override
@@ -167,8 +167,8 @@ public class RiwayatPenyakitYgPernahDideritaActivity extends AppCompatActivity i
             @Override
             protected Map<String,String> getParams(){
                 Map<String,String> params = new HashMap<String, String>();
-                String id_user = Config.GetString(RiwayatPenyakitYgPernahDideritaActivity.this, "id_user");
-                params.put("id_anak", id_user);
+                String id_anak = Config.GetString(RiwayatPenyakitYgPernahDideritaActivity.this, "id_anak");
+                params.put("id_anak", id_anak);
                 for (String str : list){
                     params.put("nama_penyakit", list.toString());
                 }

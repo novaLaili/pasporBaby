@@ -1,12 +1,12 @@
 package com.example.laili.pasporbayi;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -27,8 +27,8 @@ public class RiwayatMedikPentingActivity extends AppCompatActivity implements Vi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dra_form_riwayat_medik_penting);
-        Button next = (Button) findViewById(R.id.buttonNext);
-        Button home = (Button) findViewById(R.id.buttonHome);
+        ImageButton next = (ImageButton) findViewById(R.id.buttonNext);
+        ImageButton home = (ImageButton) findViewById(R.id.buttonHome);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,13 +57,13 @@ public class RiwayatMedikPentingActivity extends AppCompatActivity implements Vi
         final String vAlergi = alergi.getText().toString();
         final String vPenyakit = penyakit.getText().toString();
 
-    StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.252.130.173/pasporBayi_TA/form_riwayat_medik_penting.php",
+    StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.102/pasporBayi_TA/form_riwayat_medik_penting.php",
 //            StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.100/pasporBayi_TA/form_riwayat_kelahiran.php",
             new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
                     if (!response.equals("oops! Please try again")) {
-                        Intent openRKAActivity = new Intent(RiwayatMedikPentingActivity.this, RiwayatKesehatanActivity.class);
+                        Intent openRKAActivity = new Intent(RiwayatMedikPentingActivity.this, RiwayatPenyakitYgPernahDideritaActivity.class);
                         startActivity(openRKAActivity);
                     }
 //                        Toast.makeText(PendaftaranActivity.this,response,Toast.LENGTH_LONG).show();
@@ -85,8 +85,6 @@ public class RiwayatMedikPentingActivity extends AppCompatActivity implements Vi
             params.put("riwayat_alergi_obat", vAlergi);
             params.put("riwayat_penyakit_dalam_keluarga", vPenyakit);
             return params;
-
-
         }
 
     };

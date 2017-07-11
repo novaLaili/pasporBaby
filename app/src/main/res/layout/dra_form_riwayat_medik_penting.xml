@@ -77,17 +77,22 @@
             android:id="@+id/tableRowHasil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
             android:gravity="center" >
 
             <ImageButton
                 android:id="@+id/buttonHome"
                 android:src="@drawable/construction"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginLeft="0dp"/>
 
-
+            <ImageButton
+                android:id="@+id/buttonNext"
+                android:src="@drawable/nextpage"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="0dp"/>
         </TableRow>
 
 

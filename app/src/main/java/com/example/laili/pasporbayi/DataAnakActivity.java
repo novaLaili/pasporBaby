@@ -128,7 +128,7 @@ public class DataAnakActivity extends AppCompatActivity implements View.OnClickL
         final String vKondisi= kondisi_saran.getText().toString().trim();
 
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.252.130.173/pasporBayi_TA/form_data_anak.php",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.102/pasporBayi_TA/form_data_anak.php",
 //        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.100/pasporBayi_TA/form_data_anak.php",
                 new Response.Listener<String>() {
                     @Override

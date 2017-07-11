@@ -25,7 +25,7 @@ import java.util.Map;
 public class RiwayatKelahiranActivity extends AppCompatActivity implements View.OnClickListener {
     SharedPrefManager manager;
 
-    EditText tanggal_lahir, nama_RS, penolong_persanlinan_Dokterobs,
+    EditText nama_RS, penolong_persanlinan_Dokterobs,
             penolong_persalinan_DokterAnak, umur_kelahiran,
             apgar_scope, BBL, PBL, LK, LD, tali_pusat_pj, air_ketuban_warna, air_ketuban_bau,
             placenta_berat, placenta_kelahiran, goldar;
@@ -60,7 +60,6 @@ public class RiwayatKelahiranActivity extends AppCompatActivity implements View.
                 }
             }
         });
-        tanggal_lahir = (EditText) findViewById(R.id.editTextTglLahir);
         nama_RS = (EditText) findViewById(R.id.editTextNamaRS);
         penolong_persanlinan_Dokterobs = (EditText) findViewById(R.id.editTextDokterObs);
         penolong_persalinan_DokterAnak = (EditText) findViewById(R.id.editTextDokterAnak);
@@ -111,7 +110,6 @@ public class RiwayatKelahiranActivity extends AppCompatActivity implements View.
             final String vLilitan = selectedLilitan.getText().toString();
             final String vProlaps = selectedProlaps.getText().toString();
             final String vInsersi = selectedInsersi.getText().toString();
-            final String vTanggal_lahir = tanggal_lahir.getText().toString().trim();
             final String vNama_RS = nama_RS.getText().toString().trim();
             final String vPenolong_persalinan_DokterAnak = penolong_persalinan_DokterAnak.getText().toString().trim();
             final String vPenolong_persanlinan_Dokterobs = penolong_persanlinan_Dokterobs.getText().toString().trim();
@@ -129,7 +127,7 @@ public class RiwayatKelahiranActivity extends AppCompatActivity implements View.
             final String vGoldar = goldar.getText().toString().trim();
 
 
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.252.130.173/pasporBayi_TA/form_riwayat_kelahiran.php",
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.102/pasporBayi_TA/form_riwayat_kelahiran.php",
 //            StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.100/pasporBayi_TA/form_riwayat_kelahiran.php",
                     new Response.Listener<String>() {
                         @Override
@@ -156,7 +154,6 @@ public class RiwayatKelahiranActivity extends AppCompatActivity implements View.
                     Map<String, String> params = new HashMap<String, String>();
                     String id_anak = Config.GetString(RiwayatKelahiranActivity.this, "id_anak");
                     params.put("id_anak", id_anak);
-                    params.put("tanggal_lahir", vTanggal_lahir);
                     params.put("nama_RS", vNama_RS);
                     params.put("penolong_persalinan_DokterAnak", vPenolong_persalinan_DokterAnak);
                     params.put("penolong_persanlinan_Dokterobs", vPenolong_persanlinan_Dokterobs);

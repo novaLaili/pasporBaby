@@ -53,36 +53,42 @@
             android:textSize="12dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onCheckboxClicked"
             android:id="@+id/checkBoxNormal" />
         <CheckBox
             android:text="Congenital Heart Disease"
             android:textSize="12dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onCheckboxClicked"
             android:id="@+id/checkBoxCongenitalHeartDisease" />
         <CheckBox
             android:text="Caput Succedanium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12dp"
+            android:onClick="onCheckboxClicked"
             android:id="@+id/checkBoxCaput" />
         <CheckBox
             android:text="Jaundice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12dp"
+            android:onClick="onCheckboxClicked"
             android:id="@+id/checkBoxPostJaundice" />
         <CheckBox
             android:text="Cephal Hematome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12dp"
+            android:onClick="onCheckboxClicked"
             android:id="@+id/checkBoxCephal" />
         <CheckBox
             android:text="Respiratory Distress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12dp"
+            android:onClick="onCheckboxClicked"
             android:id="@+id/checkBoxRespiratory" />
         <TableRow>
         <CheckBox
@@ -90,6 +96,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12dp"
+            android:onClick="onCheckboxClicked"
             android:id="@+id/checkBoxPostlain2" />
         <EditText
             android:layout_width="wrap_content"
@@ -114,12 +121,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12dp"
+                android:onClick="onCheckboxClicked"
                 android:id="@+id/checkBoxNormalRB" />
             <CheckBox
                 android:text="Kesulitan Minum"
                 android:textSize="12dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onCheckboxClicked"
                 android:id="@+id/checkBoxKesmin" />
         </TableRow>
         <TableRow
@@ -131,11 +140,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12dp"
+                android:onClick="onCheckboxClicked"
                 android:id="@+id/checkBoxHyper" />
             <CheckBox
                 android:text="lain-lain"
                 android:layout_width="wrap_content"
                 android:textSize="12dp"
+                android:onClick="onCheckboxClicked"
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBoxlain" />
         </TableRow>
@@ -167,12 +178,12 @@
             android:id="@+id/tableRow9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <CheckBox
+            <TextView
                 android:text="Vitamin K"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textSize="12dp"
-                android:id="@+id/checkBoxVitK" />
+                android:textStyle="bold" />
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -183,12 +194,12 @@
             android:id="@+id/tableRow10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <CheckBox
+            <TextView
                 android:text="Questran : "
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textSize="12dp"
-                android:id="@+id/checkBoxQue" />
+                android:textStyle="bold"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -198,12 +209,12 @@
             android:id="@+id/tableRow11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <CheckBox
+            <TextView
                 android:text="Light Therapy"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textSize="12dp"
-                android:id="@+id/checkBoxLight" />
+                android:textStyle="bold"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -214,12 +225,12 @@
             android:id="@+id/tableRow12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <CheckBox
+            <TextView
                 android:text="lain-lain :"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textSize="12dp"
-                android:id="@+id/checkBoxlain_pengobatan" />
+                android:textStyle="bold"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -247,6 +258,7 @@
                 android:text="HB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onCheckboxClicked"
                 android:textSize="12dp"
                 android:id="@+id/checkBoxHB" />
         </TableRow>
@@ -264,6 +276,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12dp"
+                android:onClick="onCheckboxClicked"
                 android:id="@+id/checkBoxHT" />
         </TableRow>
         <TableRow
@@ -280,6 +293,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12dp"
+                android:onClick="onCheckboxClicked"
                 android:id="@+id/checkBoxLekosit" />
         </TableRow>
         <TableRow
@@ -296,6 +310,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12dp"
+                android:onClick="onCheckboxClicked"
                 android:id="@+id/checkBoxThrombosit" />
         </TableRow>
         <TableRow
@@ -312,6 +327,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12dp"
+                android:onClick="onCheckboxClicked"
                 android:id="@+id/checkBoxlain_lab" />
         </TableRow>
         <TableRow
@@ -340,12 +356,15 @@
                 android:layout_height="wrap_content"
                 android:textSize="12dp"
                 android:id="@+id/bilirubin" />
-            <EditText
-                android:layout_width="wrap_content"
-                android:text="Tgl."
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint=""
-                android:id="@+id/editTextTglBilirubin"/>
+                android:id="@+id/tglBilirubin"
+                android:onClick="setDate"
+                android:padding="10dp"
+                android:text="@string/date_selected"
+                android:hint="Tanggal"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
         </TableRow>
         <TableRow
             android:id="@+id/tableRow20"
@@ -356,12 +375,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12dp"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:text="Tgl."
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint=""
-                android:id="@+id/editTextTglBilirubin2"/>
+                android:id="@+id/tglBilirubin2"
+                android:onClick="setDate1"
+                android:padding="10dp"
+                android:text="@string/date_selected"
+                android:hint="Tanggal"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
         </TableRow>
         <TableRow
             android:id="@+id/tableRow21"

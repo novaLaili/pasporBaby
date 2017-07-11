@@ -1,6 +1,5 @@
 package com.example.laili.pasporbayi;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,14 +12,11 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import static android.accounts.AccountManager.KEY_PASSWORD;
 
 public class PendaftaranActivity extends AppCompatActivity implements View.OnClickListener{
     Button create;
@@ -77,7 +73,7 @@ public class PendaftaranActivity extends AppCompatActivity implements View.OnCli
 
 
         //StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.252.132.183/pasporBayi_TA/register.php",
-                StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.1.177/pasporBayi_TA/register.php",
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.252.130.173/pasporBayi_TA/register.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -85,7 +81,7 @@ public class PendaftaranActivity extends AppCompatActivity implements View.OnCli
                         if(!response.equals("oops! Please try again")){
                             int id = Integer.valueOf(response.split(";")[1]);
                             manager.setUserID(id);
-                            Intent openActivity = new Intent(PendaftaranActivity.this, DataAnakActivity.class);
+                            Intent openActivity = new Intent(PendaftaranActivity.this, NavActivity.class);
                             startActivity(openActivity);
                         }
                         Toast.makeText(PendaftaranActivity.this,response,Toast.LENGTH_LONG).show();

@@ -61,12 +61,15 @@
                     android:padding="10dp"
                     android:text="Hepatitis B"
                     android:textAlignment="center"/>
+
                 <TextView
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:text="0 bulan"
-                    android:textAlignment="center"/>
+                    android:textAlignment="center"
+                    android:id="@+id/textView5" />
+
                 <EditText
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"

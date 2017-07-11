@@ -112,7 +112,7 @@ public class LoginPageActivity extends AppCompatActivity {
         final String vPassword = password.getText().toString().trim();
 
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.252.130.173/pasporBayi_TA/login.php",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.102/pasporBayi_TA/login.php",
 //        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.100/pasporBayi_TA/login.php",
                 new Response.Listener<String>() {
                     @Override
@@ -133,7 +133,8 @@ public class LoginPageActivity extends AppCompatActivity {
 
                             if(match.equals("ADA")){
                                 startActivity( new Intent(LoginPageActivity.this, NavActivity.class));
-//                                startActivity( new Intent(LoginPageActivity.this, Main2Activity.class));
+//                                startActivity( new Intent(LoginPageActivity.this, RiwayatPenyakitYgPernahDideritaActivity.class));
+                                //startActivity( new Intent(LoginPageActivity.this, RiwayatKesehatanActivity.class));
                                 finish();
                             } else if (match.equals("BELUM")){
                                 startActivity(new Intent(LoginPageActivity.this, DataAnakActivity.class));
