@@ -16,29 +16,22 @@ import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 
-import com.example.laili.pasporbayi.R;
-
 public class MainTumbuhKembangActivity extends Activity {
 
     ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
     List<String> listDataHeader;
     HashMap<String, List<String[]>> listDataChild;
-    DAOTumbuhKembang daoTumbuhKembang;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tumbuhkembangbalita_main_2);
-        daoTumbuhKembang = new DAOTumbuhKembang(this);
-        Toast.makeText(this, ""+daoTumbuhKembang.find().size(), Toast.LENGTH_SHORT).show();
 
         Button submit = (Button) findViewById(R.id.idSubmit);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ModelTumbuhKembang model = new ModelTumbuhKembang(1,1,"gerak kasar", "menjimpit");
-                daoTumbuhKembang.save(model);
                 Intent intent = new Intent (MainTumbuhKembangActivity.this, NavActivity.class);
                 startActivity(intent);
                 finish();

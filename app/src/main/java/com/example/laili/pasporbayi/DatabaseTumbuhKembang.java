@@ -10,8 +10,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseTumbuhKembang extends SQLiteOpenHelper {
 
-    private static String dbName="DbTumbuhKembang";
-    private static int dbVersion=1;
+    private static String dbName = "DbTumbuhKembang";
+    private static int dbVersion = 1;
+
     public static String tabelTumbuhKembang="tumbuh_kembang_balita";
     public static String index="tumbuh_kembang_index";
     public static String umur="umur";

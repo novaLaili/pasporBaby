@@ -134,6 +134,7 @@ public class DataAnakActivity extends AppCompatActivity implements View.OnClickL
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        Log.d("Test", "This is data anak : " +response);
                         if(!response.equals("oops! Please try again")){
                             Intent openDAActivity = new Intent(DataAnakActivity.this, RiwayatKelahiranActivity.class);
                             startActivity(openDAActivity);

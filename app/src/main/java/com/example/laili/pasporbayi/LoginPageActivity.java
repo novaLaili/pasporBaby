@@ -18,6 +18,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.laili.pasporbayi.global.Api;
+import com.example.laili.pasporbayi.global.SessionManager;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
@@ -35,8 +37,6 @@ public class LoginPageActivity extends AppCompatActivity {
     EditText username;
     EditText password;
 
-    private GoogleApiClient client;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,11 +53,8 @@ public class LoginPageActivity extends AppCompatActivity {
             }
         });
 
-
-
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
         regis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,63 +69,22 @@ public class LoginPageActivity extends AppCompatActivity {
 
     }
 
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    public Action getIndexApiAction() {
-        Thing object = new Thing.Builder()
-                .setName("LoginPage Page") // TODO: Define a title for the content shown.
-                // TODO: Make sure this auto-generated URL is correct.
-                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
-                .build();
-        return new Action.Builder(Action.TYPE_VIEW)
-                .setObject(object)
-                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
-                .build();
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        AppIndex.AppIndexApi.start(client, getIndexApiAction());
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        AppIndex.AppIndexApi.end(client, getIndexApiAction());
-        client.disconnect();
-    }
-
     private void loginUser(){
         final String vUsername = username.getText().toString().trim();
         final String vPassword = password.getText().toString().trim();
 
 
-        //StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.252.132.183/pasporBayi_TA/login.php",
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.108/pasporBayi_TA/login.php",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Api.URL_LOGIN,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         if(response.equals("failure")){
                             makeText(getApplicationContext(), "Invalid username or password", Toast.LENGTH_SHORT).show();
-
                         } else {
-                            Intent openDDAActivity = new Intent(LoginPageActivity.this, NavActivity.class);
-                            Config.SetString(LoginPageActivity.this, "id_user", response);
-                            Log.d("id_user",response);
-                            startActivity(openDDAActivity);
+                            SessionManager.getInstance(LoginPageActivity.this).createSession(response);
+                            startActivity(new Intent(LoginPageActivity.this, NavActivity.class));
                             finish();
                         }
-//                        Toast.makeText(PendaftaranActivity.this,response,Toast.LENGTH_LONG).show();
 
                     }
                 },

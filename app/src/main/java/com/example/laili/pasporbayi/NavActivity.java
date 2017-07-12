@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.laili.pasporbayi.global.SessionManager;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
@@ -108,6 +109,10 @@ public class NavActivity extends AppCompatActivity
         } else if (id == R.id.buttonCatKunjungan) {
             Intent openCatKunj = new Intent(NavActivity.this, CatatanKunjunganActivity.class);
             startActivity(openCatKunj);
+        } else if(id == R.id.buttonLogout){
+            SessionManager.getInstance(this).destroySession();
+            startActivity(new Intent(this, LoginPageActivity.class));
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

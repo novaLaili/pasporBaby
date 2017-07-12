@@ -13,25 +13,24 @@
         android:layout_alignParentBottom="true"
         android:text="Submit"/>
 
-
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/idSubmit">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#f4f4f4">
 
-        <ExpandableListView
-            android:id="@+id/lvExp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_width="400dp"/>
+            android:orientation="vertical"
+            android:background="#f4f4f4">
 
-    </LinearLayout>
+            <ExpandableListView
+                android:id="@+id/lvExp"
+                android:layout_height="match_parent"
+                android:layout_width="400dp"/>
+        </LinearLayout>
     </HorizontalScrollView>
-    </RelativeLayout>
+</RelativeLayout>
         <!--</HorizontalScrollView>-->
     <!--</android.support.v4.widget.NestedScrollView>-->
 

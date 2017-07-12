@@ -22,5 +22,9 @@
             android:id="@+id/buttonCatKunjungan"
             android:icon="@drawable/ic_menu_manage"
             android:title="Catatan Kunjungan" />
+        <item
+            android:id="@+id/buttonLogout"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Log out" />
     </group>
 </menu>
