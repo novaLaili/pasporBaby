@@ -20,37 +20,42 @@ public class OpsiStatusGiziActivity extends AppCompatActivity {
         LingkarKUmur = (TextView) findViewById(R.id.LKUmur);
         BeratBTinggi = (TextView) findViewById(R.id.BBTinggi);
 
-        BeratBTBUmur.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(OpsiStatusGiziActivity.this, HasilStatusGiziActivity.class);
-            }
-        });
-
         BeratBUmur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OpsiStatusGiziActivity.this, HasilStatusGiziBBUmurActivity.class);
+                Intent intent = new Intent(OpsiStatusGiziActivity.this, HasilStatusGiziActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        BeratBTBUmur.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent openHTKActivity = new Intent(OpsiStatusGiziActivity.this, MainActivity.class);
+                startActivity(openHTKActivity);
             }
         });
 
         TinggiBUmur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OpsiStatusGiziActivity.this, HasilStatusGiziActivity.class);
+                Intent intent = new Intent(OpsiStatusGiziActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 
         LingkarKUmur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OpsiStatusGiziActivity.this, HasilStatusGiziActivity.class);
+                Intent intent = new Intent(OpsiStatusGiziActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
         BeratBTinggi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OpsiStatusGiziActivity.this, HasilStatusGiziActivity.class);
+                Intent intent = new Intent(OpsiStatusGiziActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 

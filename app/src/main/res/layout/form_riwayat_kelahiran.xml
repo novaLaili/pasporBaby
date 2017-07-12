@@ -41,27 +41,6 @@
             android:gravity="center"
             />
 
-        <!--Baris 2 Kolom 2 -->
-
-        <TableRow
-            android:id="@+id/tableRow2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-
-            <TextView
-                android:id="@+id/tglLahir"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tgl Lahir : "
-                android:textSize="14dp" />
-
-            <EditText
-                android:id="@+id/editTextTglLahir"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10" >
-            </EditText>
-        </TableRow>
 
         <!-- Baris 3 Kolom 3 -->
 
@@ -404,7 +383,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <RadioButton
-                    android:text="Ada /"
+                    android:text="Ada"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/RadioButtonAdalilitan" />
@@ -430,7 +409,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <RadioButton
-                    android:text="Ada /"
+                    android:text="Ada"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/RadioButtonAdaprolaps" />
@@ -459,12 +438,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <RadioButton
-                    android:text="Sentral /"
+                    android:text="Sentral"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/RadioButtonsentral" />
                 <RadioButton
-                    android:text="Leteral /"
+                    android:text="Leteral"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/RadioButtonLeteral" />
@@ -532,12 +511,12 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/group6">
                 <RadioButton
-                    android:text="Normal /"
+                    android:text="Normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/RadioButtonjumlahNormal" />
                 <RadioButton
-                    android:text="Hydramnion /"
+                    android:text="Hydramnion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/RadioButtonjumlahHydram" />

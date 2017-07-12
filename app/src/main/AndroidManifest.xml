@@ -52,8 +52,7 @@
         <activity
             android:name=".NavActivity"
             android:label="@string/title_activity_nav"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <!-- <activity android:name=".DBHelper" /> -->
         <activity android:name=".CatatanImunisasiActivity" />
         <activity android:name=".Config" />
@@ -78,6 +77,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".RekapTumbuhKembangActivity" />
+        <activity android:name=".MainPenyakitYgPernahDideritaActivity" />
+        <activity android:name=".Main2Activity"></activity>
     </application>
 
 </manifest>

@@ -39,8 +39,8 @@ public class HasilStatusGiziActivity extends AppCompatActivity implements View.O
         String jenis_kelamin = bundle.getString("jenis_kelamin", null);
         int tahun = bundle.getInt("tahun");
         int bulan = bundle.getInt("bulan");
-        double berat_badan = bundle.getInt("berat");
-        double tinggi_badan = bundle.getInt("tinggi");
+        float berat_badan = bundle.getInt("berat");
+        float tinggi_badan = bundle.getInt("tinggi");
 
         TabelSD tabelSD = TabelSD.getInstance();
         int SD = tabelSD.search(jenis_kelamin, tahun, bulan, berat_badan, tinggi_badan);

@@ -1,13 +1,10 @@
 package com.example.laili.pasporbayi;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
@@ -28,7 +25,7 @@ import java.util.Map;
 public class RiwayatKelahiranActivity extends AppCompatActivity implements View.OnClickListener {
     SharedPrefManager manager;
 
-    EditText tanggal_lahir, nama_RS, penolong_persanlinan_Dokterobs,
+    EditText nama_RS, penolong_persanlinan_Dokterobs,
             penolong_persalinan_DokterAnak, umur_kelahiran,
             apgar_scope, BBL, PBL, LK, LD, tali_pusat_pj, air_ketuban_warna, air_ketuban_bau,
             placenta_berat, placenta_kelahiran, goldar;
@@ -39,247 +36,13 @@ public class RiwayatKelahiranActivity extends AppCompatActivity implements View.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dra_form_riwayat_kelahiran);
+        setContentView(R.layout.form_riwayat_kelahiran);
 
         manager = SharedPrefManager.getmInstance(this);
 
         ImageButton next = (ImageButton) findViewById(R.id.buttonNext);
         ImageButton home = (ImageButton) findViewById(R.id.buttonHome);
 
-
-
-
-//        checkbox1 = (CheckBox) findViewById(R.id.checkBoxAterm);
-//        checkbox2 = (CheckBox) findViewById(R.id.checkBoxPremature);
-//        checkbox3 = (CheckBox) findViewById(R.id.checkBoxDystmature);
-//        checkbox4 = (CheckBox) findViewById(R.id.checkBoxPostMature);
-//
-//        checkboxLJ1 = (CheckBox) findViewById(R.id.checkBoxKepala);
-//        checkboxLJ2 = (CheckBox) findViewById(R.id.checkBoxBokong);
-//        checkboxLJ3 = (CheckBox) findViewById(R.id.checkBoxLintang);
-//        checkboxLJ4 = (CheckBox) findViewById(R.id.checkBoxLain2);
-//
-//        checkboxCL1 = (CheckBox) findViewById(R.id.checkBoxPartusSpontan);
-//        checkboxCL2 = (CheckBox) findViewById(R.id.checkBoxSpontanSungsang);
-//        checkboxCL3 = (CheckBox) findViewById(R.id.checkBoxVacuum);
-//        checkboxCL4 = (CheckBox) findViewById(R.id.checkBoxForcep);
-//        checkboxCL5 = (CheckBox) findViewById(R.id.checkBoxVersi);
-//        checkboxCL6 = (CheckBox) findViewById(R.id.checkBoxSectio);
-//
-//        checkboxL1 = (CheckBox) findViewById(R.id.checkBoxAdalilitan);
-//        checkboxL2 = (CheckBox) findViewById(R.id.checkBoxTidaklilitan);
-//
-//        checkboxP1 = (CheckBox) findViewById(R.id.checkBoxAdaprolaps);
-//        checkboxP2 = (CheckBox) findViewById(R.id.checkBoxTidakprolaps);
-//
-//        checkBoxI1 = (CheckBox) findViewById(R.id.checkBoxsentral);
-//        checkBoxI2 = (CheckBox) findViewById(R.id.checkBoxLeteral);
-//
-//        checkBoxJ1 = (CheckBox) findViewById(R.id.checkBoxjumlahNormal);
-//        checkBoxJ2 = (CheckBox) findViewById(R.id.checkBoxjumlahHydram);
-//        checkBoxJ3 = (CheckBox) findViewById(R.id.checkBoxjumlahOligam);
-//
-//        checkbox1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() { //hanya salah satu checkbox yang dapat dipilih
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkbox2.setChecked(false);
-//                checkbox3.setChecked(false);
-//                checkbox4.setChecked(false);
-//            }
-//        });
-//
-//        checkbox2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkbox1.setChecked(false);
-//                checkbox3.setChecked(false);
-//                checkbox4.setChecked(false);
-//            }
-//        });
-//
-//
-//
-//        checkboxLJ1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkboxLJ2.setChecked(false);
-//                checkboxLJ3.setChecked(false);
-//                checkboxLJ4.setChecked(false);
-//            }
-//        });
-//
-//        checkboxLJ2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkboxLJ1.setChecked(false);
-//                checkboxLJ3.setChecked(false);
-//                checkboxLJ4.setChecked(false);
-//            }
-//        });
-//
-//        checkboxLJ3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkboxLJ1.setChecked(false);
-//                checkboxLJ2.setChecked(false);
-//                checkboxLJ4.setChecked(false);
-//            }
-//        });
-//
-//        checkboxLJ4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkboxLJ1.setChecked(false);
-//                checkboxLJ2.setChecked(false);
-//                checkboxLJ3.setChecked(false);
-//            }
-//        });
-//
-//        checkboxCL1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkboxCL2.setChecked(false);
-//                checkboxCL3.setChecked(false);
-//                checkboxCL4.setChecked(false);
-//                checkboxCL5.setChecked(false);
-//                checkboxCL6.setChecked(false);
-//            }
-//        });
-//
-//        checkboxCL2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkboxCL1.setChecked(false);
-//                checkboxCL2.setChecked(false);
-//                checkboxCL4.setChecked(false);
-//                checkboxCL5.setChecked(false);
-//                checkboxCL6.setChecked(false);
-//            }
-//        });
-//
-//        checkboxCL3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkboxCL1.setChecked(false);
-//                checkboxCL2.setChecked(false);
-//                checkboxCL4.setChecked(false);
-//                checkboxCL5.setChecked(false);
-//                checkboxCL6.setChecked(false);
-//            }
-//        });
-//
-//        checkboxCL4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkboxCL1.setChecked(false);
-//                checkboxCL2.setChecked(false);
-//                checkboxCL3.setChecked(false);
-//                checkboxCL5.setChecked(false);
-//                checkboxCL6.setChecked(false);
-//            }
-//        });
-//
-//        checkboxCL5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkboxCL1.setChecked(false);
-//                checkboxCL2.setChecked(false);
-//                checkboxCL3.setChecked(false);
-//                checkboxCL4.setChecked(false);
-//                checkboxCL6.setChecked(false);
-//            }
-//        });
-//
-//        checkboxCL6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkboxCL1.setChecked(false);
-//                checkboxCL2.setChecked(false);
-//                checkboxCL3.setChecked(false);
-//                checkboxCL4.setChecked(false);
-//                checkboxCL5.setChecked(false);
-//            }
-//        });
-//
-//        checkBoxI1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkBoxI2.setChecked(false);
-//            }
-//        });
-//
-//        checkBoxI2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkBoxI1.setChecked(false);
-//            }
-//        });
-//
-//        checkboxL1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkboxL2.setChecked(false);
-//            }
-//        });
-//
-//        checkboxL2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkboxL1.setChecked(false);
-//            }
-//        });
-//
-//        checkboxP1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkboxP2.setChecked(false);
-//            }
-//        });
-//
-//        checkboxP2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkboxP1.setChecked(false);
-//            }
-//        });
-//
-//        checkboxL1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkboxL2.setChecked(false);
-//            }
-//        });
-//
-//        checkboxL2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkboxL1.setChecked(false);
-//            }
-//        });
-//
-//        checkBoxJ1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkBoxJ2.setChecked(false);
-//                checkBoxJ3.setChecked(false);
-//            }
-//        });
-//
-//        checkBoxJ2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkBoxJ1.setChecked(false);
-//                checkBoxJ3.setChecked(false);
-//            }
-//        });
-//
-//        checkBoxJ3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                checkBoxJ1.setChecked(false);
-//                checkBoxJ2.setChecked(false);
-//            }
-//        });
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -297,7 +60,6 @@ public class RiwayatKelahiranActivity extends AppCompatActivity implements View.
                 }
             }
         });
-        tanggal_lahir = (EditText) findViewById(R.id.editTextTglLahir);
         nama_RS = (EditText) findViewById(R.id.editTextNamaRS);
         penolong_persanlinan_Dokterobs = (EditText) findViewById(R.id.editTextDokterObs);
         penolong_persalinan_DokterAnak = (EditText) findViewById(R.id.editTextDokterAnak);
@@ -324,82 +86,13 @@ public class RiwayatKelahiranActivity extends AppCompatActivity implements View.
     }
 
     private void InputData() {
-//        if (checkbox1.isChecked()) {
-//            kondisiLahir = "Aterm";
-//        } else if (checkbox3.isChecked()) {
-//            kondisiLahir = "Dysmature";
-//        } else if (checkbox2.isChecked()) {
-//            kondisiLahir = "Premature";
-//        } else if (checkbox4.isChecked()) {
-//            kondisiLahir = "PostMature";
-//        }
-//
-//        if (checkboxLJ1.isChecked()) {
-//            letakJanin = "Kepala";
-//        } else if (checkboxLJ2.isChecked()) {
-//            letakJanin = "Bokong";
-//        } else if (checkboxLJ3.isChecked()) {
-//            letakJanin = "Lintang";
-//        } else if (checkboxLJ4.isChecked()) {
-//            letakJanin = "Lain-lain";
-//        }
-//
-//        if (checkboxCL1.isChecked()) {
-//            caraLahir = "Partus Spontan";
-//        } else if (checkboxCL2.isChecked()) {
-//            caraLahir = "Spontan Sungsang";
-//        } else if (checkboxCL3.isChecked()) {
-//            caraLahir = "Vacuum Extraksi";
-//        } else if (checkboxCL4.isChecked()) {
-//            caraLahir = "Forcep Extraksi";
-//        } else if (checkboxCL5.isChecked()) {
-//            caraLahir = "Versi Ekstraksi";
-//        } else if (checkboxCL6.isChecked()) {
-//            caraLahir = "Sectio Caesaria";
-//        }
-//
-//
-//        if (checkboxL1.isChecked()) {
-//            lilitan = "Kepala";
-//        } else if (checkboxL2.isChecked()) {
-//            lilitan = "Bokong";
-//        }
-//
-//        if (checkboxP1.isChecked()) {
-//            prolaps = "Ada";
-//        } else if (checkboxP2.isChecked()) {
-//            prolaps = "Tidak Ada";
-//        }
-//
-//        if (checkBoxI1.isChecked()) {
-//            insersi = "Ada";
-//        } else if (checkBoxI2.isChecked()) {
-//            insersi = "Ada";
-//        }
-//
-//        if (checkBoxJ1.isChecked()) {
-//            jumlahAirKetuban = "Normal";
-//        } else if (checkBoxJ2.isChecked()) {
-//            jumlahAirKetuban = "Hydramnion";
-//        } else if (checkBoxJ3.isChecked()) {
-//            jumlahAirKetuban = "Oligamnion";
-//        grupKondisiLahir =  (RadioGroup)findViewById(R.id.group1);
-//        grupLetakJanin = (RadioGroup) findViewById(R.id.group2);
-//        grupCaraLahir = (RadioGroup) findViewById(R.id.group3);
-//        grupLilitan = (RadioGroup) findViewById(R.id.group4);
-//        grupProlaps = (RadioGroup) findViewById(R.id.group5);
-//        grupInsersi = (RadioGroup) findViewById(R.id.groupInsersi);
-//        grupJumlah = (RadioGroup) findViewById(R.id.group6);
-
-        //grupLetakJanin, grupCaraLahir, grupLilitan, grupProlaps, grupInsersi, grupJumlah;
-
             int RadiobuttonKondisiLahir = grupKondisiLahir.getCheckedRadioButtonId();
-            int RadiobuttonLetakJanin = grupKondisiLahir.getCheckedRadioButtonId();
-            int RadiobuttonCaraLahir = grupKondisiLahir.getCheckedRadioButtonId();
-            int RadiobuttonLilitan = grupKondisiLahir.getCheckedRadioButtonId();
-            int RadiobuttonProlaps = grupKondisiLahir.getCheckedRadioButtonId();
-            int RadiobuttonInsersi = grupKondisiLahir.getCheckedRadioButtonId();
-            int RadiobuttonJumlah = grupKondisiLahir.getCheckedRadioButtonId();
+            int RadiobuttonLetakJanin = grupLetakJanin.getCheckedRadioButtonId();
+            int RadiobuttonCaraLahir = grupCaraLahir.getCheckedRadioButtonId();
+            int RadiobuttonLilitan = grupLilitan.getCheckedRadioButtonId();
+            int RadiobuttonProlaps = grupProlaps.getCheckedRadioButtonId();
+            int RadiobuttonInsersi = grupInsersi.getCheckedRadioButtonId();
+            int RadiobuttonJumlah = grupJumlah.getCheckedRadioButtonId();
 
             RadioButton selectedKondisiLahir = (RadioButton) findViewById(RadiobuttonKondisiLahir);
             RadioButton selectedLetakJanin = (RadioButton) findViewById(RadiobuttonLetakJanin);
@@ -417,7 +110,6 @@ public class RiwayatKelahiranActivity extends AppCompatActivity implements View.
             final String vLilitan = selectedLilitan.getText().toString();
             final String vProlaps = selectedProlaps.getText().toString();
             final String vInsersi = selectedInsersi.getText().toString();
-            final String vTanggal_lahir = tanggal_lahir.getText().toString().trim();
             final String vNama_RS = nama_RS.getText().toString().trim();
             final String vPenolong_persalinan_DokterAnak = penolong_persalinan_DokterAnak.getText().toString().trim();
             final String vPenolong_persanlinan_Dokterobs = penolong_persanlinan_Dokterobs.getText().toString().trim();
@@ -435,20 +127,16 @@ public class RiwayatKelahiranActivity extends AppCompatActivity implements View.
             final String vGoldar = goldar.getText().toString().trim();
 
 
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.252.126.206/pasporBayi_TA/form_riwayat_kelahiran.php",
-            //StringRequest stringRequest = new StringRequest(Request.Method.POST, "http:///192.168.0.105/pasporBayi_TA/form_riwayat_kelahiran.php",
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.102/pasporBayi_TA/form_riwayat_kelahiran.php",
+//            StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.100/pasporBayi_TA/form_riwayat_kelahiran.php",
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
                             if (!response.equals("oops! Please try again")) {
-                                Intent openRKAActivity = new Intent(RiwayatKelahiranActivity.this, RiwayatKesehatanActivity.class);
-                                startActivity(openRKAActivity);
-                            }
-                            else {
-                                Intent openDAActivity = new Intent(RiwayatKelahiranActivity.this, RiwayatKesehatanActivity.class);
                                 Config.SetString(RiwayatKelahiranActivity.this, "id_riwayat_kelahiran", response);
                                 Log.d("id_riwayat_kelahiran",response);
-                                startActivity(openDAActivity);
+                                Intent openRKAActivity = new Intent(RiwayatKelahiranActivity.this, RiwayatKesehatanActivity.class);
+                                startActivity(openRKAActivity);
                             }
 //                        Toast.makeText(PendaftaranActivity.this,response,Toast.LENGTH_LONG).show();
 
@@ -464,7 +152,8 @@ public class RiwayatKelahiranActivity extends AppCompatActivity implements View.
                 @Override
                 protected Map<String, String> getParams() {
                     Map<String, String> params = new HashMap<String, String>();
-                    params.put("tanggal_lahir", vTanggal_lahir);
+                    String id_anak = Config.GetString(RiwayatKelahiranActivity.this, "id_anak");
+                    params.put("id_anak", id_anak);
                     params.put("nama_RS", vNama_RS);
                     params.put("penolong_persalinan_DokterAnak", vPenolong_persalinan_DokterAnak);
                     params.put("penolong_persanlinan_Dokterobs", vPenolong_persanlinan_Dokterobs);
@@ -487,8 +176,6 @@ public class RiwayatKelahiranActivity extends AppCompatActivity implements View.
                     params.put("placenta_berat", vPlacenta_berat);
                     params.put("placenta_kelahiran", vPlacenta_kelahiran);
                     params.put("goldar", vGoldar);
-                    params.put("id_anak",""+manager.getUserId());
-                    Log.d("ID", ""+manager.getUseId());
                     return params;
 
 

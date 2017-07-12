@@ -41,26 +41,6 @@
             android:gravity="center"
             />
 
-        <!-- Baris 2 Kolom 2 -->
-        <TableRow
-            android:id="@+id/tableRow2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/tgl"
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tanggal Lahir : "
-                android:textSize="16dp" />
-            <TextView
-                android:id="@+id/idtanggal"
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="tanggal"
-                android:textSize="16dp" />
-        </TableRow>
         <TableRow
             android:id="@+id/tableRow3"
             android:layout_width="match_parent"
@@ -82,7 +62,6 @@
         </TableRow>
         <TextView
             android:id="@+id/penolong"
-            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Penolong Persalinan : "

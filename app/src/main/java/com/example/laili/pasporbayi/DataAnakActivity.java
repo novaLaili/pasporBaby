@@ -2,13 +2,11 @@ package com.example.laili.pasporbayi;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
-import android.app.TimePickerDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -29,8 +27,8 @@ import java.util.Map;
 public class DataAnakActivity extends AppCompatActivity implements View.OnClickListener  {
     SharedPrefManager manager;
     EditText nama, waktu, berat, panjang, LK, tempat_lahir, RS,
-            nama_ayah, tgl_lahir_ayah, tempat_lahir_ayah, pekerjaan_ayah, alamat_kantor_ayah,
-            tlp_kantor_ayah, tlp_seluler_ayah, nama_ibu, tgl_lahir_ibu, tempat_lahir_ibu, pekerjaan_ibu,
+            nama_ayah, tempat_lahir_ayah, pekerjaan_ayah, alamat_kantor_ayah,
+            tlp_kantor_ayah, tlp_seluler_ayah, nama_ibu, tempat_lahir_ibu, pekerjaan_ibu,
             alamat_kantor_ibu, tlp_kantor_ibu, tlp_seluler_ibu, nama_dktr_kandungan, nama_dktr_anak, kondisi_saran;
 
     private Calendar calendar;
@@ -42,6 +40,7 @@ public class DataAnakActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dra_form_data_anak);
 
+        SearchID();
         manager = SharedPrefManager.getmInstance(this);
 
         calendar = Calendar.getInstance();
@@ -70,7 +69,7 @@ public class DataAnakActivity extends AppCompatActivity implements View.OnClickL
                 }
             }
         });
-        SearchID();
+
     }
 
     void SearchID(){
@@ -129,8 +128,8 @@ public class DataAnakActivity extends AppCompatActivity implements View.OnClickL
         final String vKondisi= kondisi_saran.getText().toString().trim();
 
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.252.129.206/pasporBayi_TA/form_data_anak.php",
-        //StringRequest stringRequest = new StringRequest(Request.Method.POST, "http:///192.168.0.105/pasporBayi_TA/form_data_anak.php",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.102/pasporBayi_TA/form_data_anak.php",
+//        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.100/pasporBayi_TA/form_data_anak.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -139,15 +138,6 @@ public class DataAnakActivity extends AppCompatActivity implements View.OnClickL
                             Intent openDAActivity = new Intent(DataAnakActivity.this, RiwayatKelahiranActivity.class);
                             startActivity(openDAActivity);
                         }
-                        else {
-                            Intent openDAActivity = new Intent(DataAnakActivity.this, RiwayatKelahiranActivity.class);
-                            Config.SetString(DataAnakActivity.this, "id_anak", response);
-                            Log.d("id_anak",response);
-                            startActivity(openDAActivity);
-                        }
-                        //Toast.makeText(DataAnakActivity.this, response, Toast.LENGTH_SHORT).show();
-//                        Toast.makeText(PendaftaranActivity.this,response,Toast.LENGTH_LONG).show();
-
                     }
                 },
                 new Response.ErrorListener() {
@@ -160,6 +150,8 @@ public class DataAnakActivity extends AppCompatActivity implements View.OnClickL
             @Override
             protected Map<String,String> getParams(){
                 Map<String,String> params = new HashMap<String, String>();
+                String id_user = Config.GetString(DataAnakActivity.this, "id_user");
+                params.put("id_anak", id_user);
                 params.put("nama",vNama);
                 params.put("tgl_lahir",vTanggal_lahir);
                 params.put("waktu",vWaktu);
@@ -185,7 +177,6 @@ public class DataAnakActivity extends AppCompatActivity implements View.OnClickL
                 params.put("nama_dktr_kandungan_yg_membantu_kelahiran",vDokter_kandungan);
                 params.put("nama_dktr_anak_yg_membantu_kelahiran",vDokter_anak);
                 params.put("kondisi_atau_saran_khusus_yg_diberikan",vKondisi);
-                params.put("id_user",""+manager.getUserId());
                 return params;
             }
 
@@ -198,7 +189,21 @@ public class DataAnakActivity extends AppCompatActivity implements View.OnClickL
     @SuppressWarnings("deprecation")
     public void setDate(View view) {
         showDialog(999);
-        Toast.makeText(getApplicationContext(), "ca",
+        Toast.makeText(getApplicationContext(), "calender",
+                Toast.LENGTH_SHORT)
+                .show();
+    }
+
+    public void setDate1(View view) {
+        showDialog(998);
+        Toast.makeText(getApplicationContext(), "calender1",
+                Toast.LENGTH_SHORT)
+                .show();
+    }
+
+    public void setDate2(View view) {
+        showDialog(997);
+        Toast.makeText(getApplicationContext(), "calender2",
                 Toast.LENGTH_SHORT)
                 .show();
     }
@@ -209,6 +214,12 @@ public class DataAnakActivity extends AppCompatActivity implements View.OnClickL
         if (id == 999) {
             return new DatePickerDialog(this,
                     myDateListener, year, month, day);
+        }else if (id == 998){
+            return new DatePickerDialog(this,
+                    ayahDateListener, year, month, day);
+        }else if (id == 997){
+            return new DatePickerDialog(this,
+                    ibuDateListener, year, month, day);
         }
         return null;
     }
@@ -226,9 +237,46 @@ public class DataAnakActivity extends AppCompatActivity implements View.OnClickL
                 }
             };
 
+    private DatePickerDialog.OnDateSetListener ayahDateListener = new
+            DatePickerDialog.OnDateSetListener() {
+                @Override
+                public void onDateSet(DatePicker arg0,
+                                      int arg1, int arg2, int arg3) {
+                    // TODO Auto-generated method stub
+                    // arg1 = year
+                    // arg2 = month
+                    // arg3 = day
+                    showDate1(arg1, arg2+1, arg3);
+                }
+            };
+
+    private DatePickerDialog.OnDateSetListener ibuDateListener = new
+            DatePickerDialog.OnDateSetListener() {
+                @Override
+                public void onDateSet(DatePicker arg0,
+                                      int arg1, int arg2, int arg3) {
+                    // TODO Auto-generated method stub
+                    // arg1 = year
+                    // arg2 = month
+                    // arg3 = day
+                    showDate2(arg1, arg2+1, arg3);
+                }
+            };
+
+
+
     //fungsi menampilkan tanggal
     private void showDate(int year, int month, int day) {
         dateView.setText(new StringBuilder().append(year).append("-")
+                .append(month).append("-").append(day));
+
+    }
+    private void showDate1(int year, int month, int day) {
+        dateViewAyah.setText(new StringBuilder().append(year).append("-")
+                .append(month).append("-").append(day));
+    }
+    private void showDate2(int year, int month, int day) {
+        dateViewIbu.setText(new StringBuilder().append(year).append("-")
                 .append(month).append("-").append(day));
     }
 

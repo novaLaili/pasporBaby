@@ -2,17 +2,14 @@ package com.example.laili.pasporbayi;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -23,13 +20,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
 public class RekapRiwayatKelahiranActivity extends AppCompatActivity  {
 
-    private TextView txttanggal_lahir, txtnama_RS, txtpenolong_persalinan_DokterObs, txtLD, txttali_pusat_pj, txtLK, txttali_pusat_insersi, txtair_ketuban_warna, txtair_ketuban_jumlah,
+    private TextView txtnama_RS, txtpenolong_persalinan_DokterObs, txtLD, txttali_pusat_pj, txtLK, txttali_pusat_insersi, txtair_ketuban_warna, txtair_ketuban_jumlah,
             txtpenolong_persalinan_DokterAnak, txtumur_kelahiran, txtkondisi_lahir, txttali_pusat_lilitan, txttali_pusat_prolaps, txtair_ketuban_bau,
             txtletak_janin, txtcara_lahir, txtapgar_scope, txtBBL, txtPBL, txtplacenta_berat, txtplacenta_kelahiran, txtgoldar;
 
@@ -40,29 +33,6 @@ public class RekapRiwayatKelahiranActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rekap_riwayat_kelahiran);
 
-//        ImageButton next = (ImageButton) findViewById(R.id.buttonNext);
-//        ImageButton home = (ImageButton) findViewById(R.id.buttonHome);
-//        next.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                switch (view.getId()) {
-//                    case R.id.buttonNext :
-//                        Intent openRKAActivity = new Intent(RekapRiwayatKelahiranActivity.this, RekapRiwayatKesehatanActivity.class);
-//                        startActivity(openRKAActivity);
-//                }
-//            }
-//        });
-//        home.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                switch (view.getId()) {
-//                    case R.id.buttonHome :
-//                        Intent openRKAActivity = new Intent(RekapRiwayatKelahiranActivity.this, MainActivity.class);
-//                        startActivity(openRKAActivity);
-//                }
-//            }
-//        });
-        txttanggal_lahir = (TextView) findViewById(R.id.idtanggal);
         txtnama_RS = (TextView) findViewById(R.id.idRS);
         txtpenolong_persalinan_DokterObs = (TextView) findViewById(R.id.idDokterObs);
         txtpenolong_persalinan_DokterAnak = (TextView) findViewById(R.id.idDokterAnak);
@@ -86,7 +56,28 @@ public class RekapRiwayatKelahiranActivity extends AppCompatActivity  {
         txtplacenta_kelahiran = (TextView) findViewById(R.id.idKelahiran);
         txtgoldar = (TextView) findViewById(R.id.idGoldar);
 
+        ImageButton next = (ImageButton) findViewById(R.id.buttonNext);
+        ImageButton home = (ImageButton) findViewById(R.id.buttonHome);
+
         getData();
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent openRKAActivity = new Intent(RekapRiwayatKelahiranActivity.this, RekapRiwayatKesehatanActivity.class);
+                startActivity(openRKAActivity);
+            }
+        });
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch (view.getId()) {
+                    case R.id.buttonHome :
+                        Intent openRKActivity = new Intent(RekapRiwayatKelahiranActivity.this, NavActivity.class);
+                        startActivity(openRKActivity);
+                }
+            }
+        });
     }
 
     private void getData() {
@@ -120,7 +111,6 @@ public class RekapRiwayatKelahiranActivity extends AppCompatActivity  {
             JSONArray result = jsonObject.getJSONArray(Config.JSON_ARRAY);
             JSONObject data = result.getJSONObject(0);
 
-            txttanggal_lahir.setText(data.getString("tanggal_lahir"));
             txtnama_RS.setText(data.getString("nama_RS"));
             txtpenolong_persalinan_DokterObs.setText(data.getString("penolong_persalinan_DokterObs"));
             txtpenolong_persalinan_DokterAnak.setText(data.getString("penolong_persalinan_DokterAnak"));
@@ -143,6 +133,7 @@ public class RekapRiwayatKelahiranActivity extends AppCompatActivity  {
             txtplacenta_berat.setText(data.getString("placenta_berat"));
             txtplacenta_kelahiran.setText(data.getString("placenta_kelahiran"));
             txtgoldar.setText(data.getString("goldar"));
+
         } catch (JSONException e) {
             e.printStackTrace();
         }

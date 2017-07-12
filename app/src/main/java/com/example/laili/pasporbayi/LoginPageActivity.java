@@ -84,6 +84,25 @@ public class LoginPageActivity extends AppCompatActivity {
                             SessionManager.getInstance(LoginPageActivity.this).createSession(response);
                             startActivity(new Intent(LoginPageActivity.this, NavActivity.class));
                             finish();
+                            String arr[] = response.split("_", 2);
+
+                            String id_user = arr[0];   //the
+                            String match = arr[1];
+                            Log.d("match", match);
+                            Log.d("id_user", id_user);
+
+                            Config.SetString(LoginPageActivity.this, "id_user", id_user);
+                            Config.SetString(LoginPageActivity.this, "id_anak", id_user);
+
+                            if(match.equals("ADA")){
+                                startActivity( new Intent(LoginPageActivity.this, NavActivity.class));
+//                                startActivity( new Intent(LoginPageActivity.this, RiwayatPenyakitYgPernahDideritaActivity.class));
+                                //startActivity( new Intent(LoginPageActivity.this, RiwayatKesehatanActivity.class));
+                                finish();
+                            } else if (match.equals("BELUM")){
+                                startActivity(new Intent(LoginPageActivity.this, DataAnakActivity.class));
+                                finish();
+                            }
                         }
 
                     }

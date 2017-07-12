@@ -68,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="200dp"
             android:ems="6"
-            android:id="@+id/editTextPnykt"
+            android:id="@+id/idPnykt"
             android:hint="Tulis disini"
             />
 
